@@ -14,6 +14,7 @@ feedbackForm.addEventListener("submit", event => {
 
   const nameInput = document.getElementById("visitorName");
   const emailInput = document.getElementById("visitorEmail");
+  const countryInput = document.getElementById("visitorCountry");
   const satisfactionSelected = feedbackForm.querySelector(
     'input[name="satisfaction"]:checked'
   );
@@ -23,12 +24,15 @@ feedbackForm.addEventListener("submit", event => {
 
   const nameIsValid = nameInput.value.trim().length > 0;
   const emailIsValid = emailInput.checkValidity();
+  const countryIsValid = countryInput.value.trim().length > 0;
 
   nameInput.classList.toggle("is-invalid", !nameIsValid);
   emailInput.classList.toggle("is-invalid", !emailIsValid);
+  countryInput.classList.toggle("is-invalid", !countryIsValid);
 
   if (
     !nameIsValid ||
+    !countryIsValid ||
     !satisfactionSelected ||
     !improvementSelected ||
     !emailIsValid
