@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xi'an — Unearth History</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/xian.css">
+</head>
+<body>
+<div class="dust" id="dust"></div>
+<!-- HERO -->
+<section class="hero" id="home" style="padding:0;">
+  <div class="hero-content">
+    <div class="eyebrow">SHAANXI · CHINA</div>
+    <h1>XI'AN</h1>
+    <div class="sub">UNEARTH HISTORY</div>
+    <p>Step back in time and uncover the glorious past of Xi'an, where ancient wonders come to life beneath the golden dust of Shaanxi.</p>
+    <button class="btn-dig" id="beginBtn"><span>BEGIN EXCAVATION</span><span class="icon">⛏</span></button>
+  </div>
+  <div class="scroll-cue">⌄</div>
+</section>
+
+<!-- TREASURES -->
+<section class="treasures-wrap" id="treasures">
+  <div class="section-head reveal">
+    <div class="kicker">A CITY LAYERED IN TIME</div>
+    <h2>UNEARTH THE TREASURES OF XI'AN</h2>
+    <p class="desc">Four eras, one city — dig through each layer to find the next.</p>
+  </div>
+  <div class="treasures">
+    <div class="treasure reveal reveal-stagger" style="--delay:0s">
+      <div class="num">01</div>
+      <div class="label">Excavation Site</div>
+      <div class="treasure-art t1"><div class="layer"></div><div class="glyph"><img src="../images/terracotta army.jpg" alt="Terracotta Army"></div></div>
+      <p class="caption">Begin your journey at the world-famous Terracotta Army, guardians of the First Emperor.</p>
+      <div class="treasure-arrow">→</div>
+    </div>
+    <div class="treasure reveal reveal-stagger" style="--delay:.15s">
+      <div class="num">02</div>
+      <div class="label">Ancient City Wall</div>
+      <div class="treasure-art t2"><div class="layer"></div><div class="glyph"><img src="../images/Xi'an City Wall.jpg" alt="Xi'an City Wall"></div></div>
+      <p class="caption">Walk along the Ancient City Wall, one of the best-preserved in China.</p>
+      <div class="treasure-arrow">→</div>
+    </div>
+    <div class="treasure reveal reveal-stagger" style="--delay:.3s">
+      <div class="num">03</div>
+      <div class="label">Tang Dynasty</div>
+      <div class="treasure-art t3"><div class="layer"></div><div class="glyph"><img src="../images/chang an.jpg" alt="Chang'an"></div></div>
+      <p class="caption">Step into the Tang Dynasty and experience the grandeur of ancient Chang'an.</p>
+      <div class="treasure-arrow">→</div>
+    </div>
+    <div class="treasure reveal reveal-stagger" style="--delay:.45s">
+      <div class="num">04</div>
+      <div class="label">Muslim Quarter</div>
+      <div class="treasure-art t4"><div class="layer"></div><div class="glyph"><img src="../images/muslim quarter.jpg" alt="Muslim Quarter"></div></div>
+      <p class="caption">Explore the vibrant Muslim Quarter and discover local culture and cuisine.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOD -->
+<section class="food-wrap" id="food">
+  <div class="section-head reveal">
+    <div class="kicker">FAMOUS LOCAL DELICACIES YOU MUST TRY</div>
+    <h2>A TASTE OF XI'AN</h2>
+    <p class="desc">Tap a dish to uncover its story.</p>
+  </div>
+  <div class="food-track" id="foodTrack">
+    <div class="food-card f-card" data-i="1">
+      <div class="food-art f1"><div class="layer"></div><div class="glyph"><img src="../images/biang biang noodles.jpg" alt="Biangbiang Noodles"></div><div class="food-hint">+</div></div>
+      <div class="food-info">
+        <div class="fname">Biangbiang Noodles</div>
+        <div class="fdesc">Wide, hand-pulled noodles slapped by hand, tossed in a fiery chili-oil sauce with garlic and vinegar.</div>
+        <div class="fmeta">MUST TRY · STREET STALL FAVORITE</div>
+      </div>
+    </div>
+    <div class="food-card f-card" data-i="2">
+      <div class="food-art f2"><div class="layer"></div><div class="glyph"><img src="../images/Rou Jia Mo.jpg" alt="Rou Jia Mo"></div><div class="food-hint">+</div></div>
+      <div class="food-info">
+        <div class="fname">RouJiaMo</div>
+        <div class="fdesc">Often called the Chinese hamburger — a crisp flatbread stuffed with slow-braised, tender stewed meat.</div>
+        <div class="fmeta">QUICK BITE · ON-THE-GO</div>
+      </div>
+    </div>
+    <div class="food-card f-card" data-i="3">
+      <div class="food-art f3"><div class="layer"></div><div class="glyph"><img src="../images/Yang Rou Pao Mo.jpg" alt="Yangrou Paomo"></div><div class="food-hint">+</div></div>
+      <div class="food-info">
+        <div class="fname">Yangrou Paomo</div>
+        <div class="fdesc">A hearty lamb soup with crumbled flatbread, Xi'an's ultimate traditional comfort food.</div>
+        <div class="fmeta">COMFORT FOOD · WINTER FAVORITE</div>
+      </div>
+    </div>
+    <div class="food-card f-card" data-i="4">
+      <div class="food-art f4"><div class="layer"></div><div class="glyph"><img src="../images/lamb skewers.jpg" alt="Lamb Skewers"></div><div class="food-hint">+</div></div>
+      <div class="food-info">
+        <div class="fname">Lamb Skewers</div>
+        <div class="fdesc">Grilled to smoky perfection over charcoal, dusted with cumin and chili from Xinjiang-inspired grills.</div>
+        <div class="fmeta">NIGHT MARKET · SPICY</div>
+      </div>
+    </div>
+    <div class="food-card f-card" data-i="5">
+      <div class="food-art f5"><div class="layer"></div><div class="glyph"><img src="../images/persimmon cake.jpg" alt="Persimmon Cake"></div><div class="food-hint">+</div></div>
+      <div class="food-info">
+        <div class="fname">Persimmon Cake</div>
+        <div class="fdesc">Sweet, soft, and naturally delicious — a Shaanxi specialty made from ripe local persimmons.</div>
+        <div class="fmeta">SWEET TREAT · SEASONAL</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ITINERARY -->
+<section class="itin-wrap" id="itinerary">
+  <div class="section-head reveal">
+    <div class="kicker">FOLLOW THIS ITINERARY TO EXPERIENCE THE BEST OF XI'AN</div>
+    <h2>A DAY IN XI'AN</h2>
+  </div>
+  <div class="itinerary reveal">
+    <div class="itin-line" id="itinLine">
+      <div class="bar" id="itinBar"></div>
+      <div class="stop" data-i="0"><div class="dot"></div><div class="time">08:00</div><div class="label">Terracotta Army Museum</div></div>
+      <div class="stop" data-i="1"><div class="dot"></div><div class="time">10:30</div><div class="label">Ancient City Wall (Bike Ride)</div></div>
+      <div class="stop" data-i="2"><div class="dot"></div><div class="time">12:30</div><div class="label">Lunch (Roujiamo)</div></div>
+      <div class="stop" data-i="3"><div class="dot"></div><div class="time">14:30</div><div class="label">Big Wild Goose Pagoda & Da Ci'en Temple</div></div>
+      <div class="stop" data-i="4"><div class="dot"></div><div class="time">17:00</div><div class="label">Explore Muslim Quarter</div></div>
+      <div class="stop" data-i="5"><div class="dot"></div><div class="time">19:00</div><div class="label">Dinner & Street Food Experience</div></div>
+      <div class="stop" data-i="6"><div class="dot"></div><div class="time">20:30</div><div class="label">Bell Tower & Drum Tower Night View</div></div>
+    </div>
+    <div class="itin-cards" id="itinCards">
+      <div class="itin-card i1" data-i="0"><div class="layer"></div><div class="glyph"><img src="../images/terracotta army.jpg" alt="Terracotta Army"></div></div>
+      <div class="itin-card i2" data-i="1"><div class="layer"></div><div class="glyph"><img src="../images/city wall bike riders.jpg" alt="Xi'an City Wall"></div></div>
+      <div class="itin-card i3" data-i="2"><div class="layer"></div><div class="glyph"><img src="../images/Rou Jia Mo.jpg" alt="Roujiamo"></div></div>
+      <div class="itin-card i4" data-i="3"><div class="layer"></div><div class="glyph"><img src="../images/Giant Wild Goose Pagoda.jpg" alt="Giant Wild Goose Pagoda"></div></div>
+      <div class="itin-card i5" data-i="4"><div class="layer"></div><div class="glyph"><img src="../images/muslim quarter.jpg" alt="Muslim Quarter"></div></div>
+      <div class="itin-card i6" data-i="5"><div class="layer"></div><div class="glyph"><img src="../images/night market.jpg" alt="Night Market"></div></div>
+      <div class="itin-card i7" data-i="6"><div class="layer"></div><div class="glyph"><img src="../images/drum tower.jpg" alt="Drum Tower"></div></div>
+    </div>
+  </div>
+</section>
+<script src="../css/xian.js"></script>
+</body>
+</html>
