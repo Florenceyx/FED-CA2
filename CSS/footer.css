@@ -1,0 +1,354 @@
+/* =========================
+   FOOTER LAYOUT
+========================= */
+
+.site-footer {
+  position: relative;
+  z-index: 9;
+
+  min-height: 110px;
+  padding: 12px 28px;
+
+  display: grid;
+  grid-template-columns:
+    auto
+    minmax(110px, 170px)
+    minmax(330px, 1fr)
+    minmax(110px, 170px)
+    auto;
+
+  align-items: center;
+  justify-content: stretch;
+column-gap: 10px;
+  overflow: visible;
+
+  color: #cdd6e0;
+  background: #0b2038;
+  border-top: 1px solid rgba(198, 162, 75, 0.35);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.site-footer .fbrand {
+  grid-column: 1;
+  justify-self: start;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.site-footer .footer-logo {
+  color: #f4efe4;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: 0.03em;
+}
+
+.site-footer .fseal {
+  width: 35px;
+  height: 43px;
+  padding: 3px;
+
+  display: grid;
+  place-items: center;
+
+  color: #d34839;
+  background: transparent;
+  border: 1.5px solid #bb3b30;
+  border-radius: 2px;
+
+  font-family: "Noto Serif SC", serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+}
+
+/* =========================
+   SYMMETRICAL LANDSCAPES
+========================= */
+
+.site-footer .footer-pattern {
+  width: 100%;
+  max-width: 230px;
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.site-footer .footer-pattern-left {
+  grid-column: 2;justify-self: end;
+  margin-right: -25px;
+}
+
+.site-footer .footer-pattern-right {
+  grid-column: 4; justify-self: start;
+  margin-left: -25px;
+}
+
+.site-footer .footer-pattern img {
+  width: 230px;
+  height: 82px;
+  display: block;
+
+  object-fit: contain;
+  mix-blend-mode: screen;
+}
+
+
+.site-footer .footer-pattern-left img {
+  transform: scale(1.8);
+  transform-origin: center;
+}
+
+.site-footer .footer-pattern-right img {
+  transform: scale(-1.8, 1.8);
+  transform-origin: center;
+}
+
+/* =========================
+   CENTRE MESSAGE
+========================= */
+
+.site-footer .ftag {
+  grid-column: 3;
+
+  min-width: 330px;
+  text-align: center;
+}
+
+.site-footer .ftag b {
+  display: block;
+
+  color: #d9c184;
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.site-footer .ftag p {
+  margin: 5px 0 0;
+
+  color: #aebac7;
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+.site-footer .fsocial {
+  grid-column: 5;
+  justify-self: end;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+
+  min-width: 158px;
+  overflow: visible;
+}
+
+.site-footer .fsocial a {
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+
+  display: grid;
+  place-items: center;
+
+  color: #d9c184;
+  border: 1.5px solid rgba(217, 193, 132, 0.72);
+  border-radius: 50%;
+  text-decoration: none;
+
+  visibility: visible;
+  opacity: 1;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.site-footer .fsocial a svg {
+  width: 20px;
+  height: 20px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.site-footer .fsocial .icon-dot {
+  fill: currentColor;
+  stroke: none;
+}
+
+.site-footer .fsocial a:hover,
+.site-footer .fsocial a:focus-visible {
+  color: #ffe08c;
+  background: rgba(198, 162, 75, 0.16);
+  border-color: #c6a24b;
+
+  box-shadow: 0 0 18px rgba(198, 162, 75, 0.28);
+  transform: translateY(-3px) scale(1.06);
+}
+
+/* =========================
+   FEEDBACK TOOLTIP
+========================= */
+
+.site-footer #feedbackFormLink::before {
+  position: absolute;
+  right: -12px;
+  bottom: calc(100% + 12px);
+
+  width: max-content;
+  max-width: 230px;
+  padding: 9px 12px;
+
+  content: attr(data-tooltip);
+
+  color: #f8f1df;
+  background: #102b47;
+  border: 1px solid rgba(217, 193, 132, 0.5);
+  border-radius: 8px;
+
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.35;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.site-footer #feedbackFormLink::after {
+  position: absolute;
+  right: 14px;
+  bottom: calc(100% + 6px);
+
+  width: 12px;
+  height: 12px;
+
+  content: "";
+
+  background: #102b47;
+  border-right: 1px solid rgba(217, 193, 132, 0.5);
+  border-bottom: 1px solid rgba(217, 193, 132, 0.5);
+
+  opacity: 0;
+  pointer-events: none;
+  transform: rotate(45deg);
+
+  transition: opacity 0.2s ease;
+}
+
+.site-footer #feedbackFormLink:hover::before,
+.site-footer #feedbackFormLink:hover::after,
+.site-footer #feedbackFormLink:focus-visible::before,
+.site-footer #feedbackFormLink:focus-visible::after {
+  opacity: 1;
+}
+
+.site-footer #feedbackFormLink:hover::before,
+.site-footer #feedbackFormLink:focus-visible::before {
+  transform: translateY(0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1180px) {
+  .site-footer {
+    grid-template-columns:
+      auto
+      minmax(80px, 130px)
+      minmax(280px, 1fr)
+      minmax(80px, 130px)
+      auto;
+
+    column-gap: 12px;
+    padding: 12px 18px;
+  }
+
+  .site-footer .footer-pattern {
+    max-width: 130px;
+  }
+
+  .site-footer .footer-pattern img {
+    width: 130px;
+  }
+
+  .site-footer .ftag {
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 820px) {
+  .site-footer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
+
+    padding: 28px 22px;
+  }
+
+  .site-footer .fbrand,
+  .site-footer .ftag,
+  .site-footer .fsocial {
+    grid-column: 1;
+  }
+
+  .site-footer .fbrand {
+    grid-row: 1;
+  }
+
+  .site-footer .ftag {
+    grid-row: 2;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .site-footer .fsocial {
+    grid-row: 3;
+    min-width: 0;
+    justify-content: center;
+  }
+
+  .site-footer .footer-pattern {
+    display: none;
+  }
+
+  .site-footer .ftag b {
+    white-space: normal;
+  }
+}
