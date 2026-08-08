@@ -1,0 +1,1233 @@
+/* =========================================================
+   CHENGDU — Slow Living, Spicy Eating
+   Design tokens
+   ========================================================= */
+:root{
+  --parchment:   #F3E7CE;
+  --parchment-2: #EADCBC;
+  --ink:         #241610;
+  --brown:       #3B2517;
+  --brown-soft:  #6B4A34;
+  --red:         #A3221F;
+  --red-dark:    #7C1815;
+  --gold:        #B8863B;
+  --gold-soft:   #D8B876;
+  --font-display:'Playfair Display', serif;
+  --font-script: 'Cormorant Garamond', serif;
+  --font-body:   'Inter', sans-serif;
+}
+
+*{box-sizing:border-box;}
+
+body{
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:var(--parchment);
+  overflow-x:hidden;
+}
+
+a{text-decoration:none;}
+
+.cd-section, .cd-hero, .cd-footer{
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(184,134,59,.06), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(163,34,31,.05), transparent 45%);
+}
+
+ /* =========================
+   NAVIGATION BAR
+========================= */
+
+.main-navbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  height: 115px;
+  display: block;
+  padding: 0;
+  background: transparent;
+  backdrop-filter: none;
+  color: var(--ink);
+}
+
+.home-page .main-navbar {
+  position: absolute;
+}
+
+.main-navbar .brand {
+  position: absolute;
+  top: 30px;
+  left: 38px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.main-navbar .brand .logo {
+  font-family: var(--serif);
+  color: var(--ink);
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+}
+
+.main-navbar .brand .logo b {
+  display: block;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.main-navbar .brand .logo span {
+  display: block;
+  margin-top: 10px;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 13.5px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.main-navbar .seal {
+  width: 43px;
+  min-width: 43px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  padding: 4px;
+  margin-top: 3px;
+
+  border: 2px solid #a82e25;
+  border-radius: 3px;
+  background: transparent;
+  box-shadow: none;
+
+  color: #a82e25;
+  font-family: var(--sc);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.main-navbar .navlinks {
+  position: absolute;
+  top: 38px;
+  left: 57%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: clamp(42px, 6vw, 100px);
+
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.main-navbar .navlinks a {
+  position: relative;
+  display: inline-block;
+  padding: 0 3px 12px;
+
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.92;
+
+  transform: scale(1);
+  transform-origin: center;
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.main-navbar .navlinks a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--gold);
+
+  transform: translateX(-50%);
+  transition: width 0.25s ease;
+}
+
+
+.main-navbar .navlinks a:hover,
+.main-navbar .navlinks a:focus-visible {
+  color: var(--ink);
+  opacity: 1;
+  transform: scale(1.07);
+}
+
+.main-navbar .navlinks a:hover::after,
+.main-navbar .navlinks a:focus-visible::after,
+.main-navbar .navlinks a.active::after {
+  width: 100%;
+}
+
+.main-navbar .navtoggle {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 22px;
+
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .home-page .main-navbar,
+  .main-navbar {
+    position: relative;
+    height: auto;
+    padding: 16px 22px;
+    background: #eef1f2;
+  }
+
+  .main-navbar .brand {
+    position: static;
+  }
+
+  .main-navbar .navlinks {
+    position: static;
+    transform: none;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 24px;
+    font-size: 12px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-navbar .brand .logo b {
+    font-size: 26px;
+  }
+
+  .main-navbar .navlinks {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-navbar .navlinks.navlinks-open {
+    display: flex;
+  }
+
+  .main-navbar .navtoggle {
+    display: block;
+  }
+}
+
+.main-navbar .nav-dropdown {
+  position: relative;
+  padding-bottom: 18px;
+  margin-bottom: -18px;
+}
+
+.main-navbar .destination-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  z-index: 50;
+  width: 220px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  border: 1px solid rgba(224,216,198,.95);
+  border-radius: 14px;
+  background: rgba(246,242,236,.97);
+  box-shadow: 0 22px 46px -24px rgba(20,30,45,.55);
+  backdrop-filter: blur(7px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, 8px);
+  transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+}
+
+.main-navbar .destination-menu a {
+  padding: 9px 10px;
+  border-radius: 8px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .02em;
+  text-align: left;
+  transform: none;
+}
+
+.main-navbar .destination-menu a::after {
+  display: none;
+}
+
+.main-navbar .destination-menu a:hover,
+.main-navbar .destination-menu a:focus-visible {
+  color: var(--ink);
+  background: #e9e0cd;
+  transform: none;
+}
+
+.main-navbar .nav-dropdown:hover .destination-menu,
+.main-navbar .nav-dropdown:focus-within .destination-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 640px) {
+  .main-navbar .nav-dropdown {
+    width: 100%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .main-navbar .destination-menu {
+    position: static;
+    width: min(100%, 280px);
+    margin: 10px auto 0;
+    transform: none;
+  }
+
+  .main-navbar .nav-dropdown:hover .destination-menu,
+  .main-navbar .nav-dropdown:focus-within .destination-menu {
+    transform: none;
+  }
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.cd-hero{
+  min-height:100vh;
+  position:relative;
+  background:
+    linear-gradient(100deg, rgba(28,17,10,.85) 0%, rgba(28,17,10,.6) 40%, rgba(28,17,10,.15) 70%, transparent 100%),
+    linear-gradient(180deg, rgba(28,17,10,.3) 0%, rgba(28,17,10,.55) 70%, var(--parchment) 100%),
+    url("../images/ChengDu/hero.jpeg") center/cover no-repeat;
+  background-color:#241610; /* shows while the photo loads, and if the path is ever wrong */
+  color:var(--parchment);
+}
+.cd-hero-texture{
+  position:absolute; inset:0;
+  background-image:
+    radial-gradient(ellipse 60% 40% at 30% 25%, rgba(163,34,31,.35), transparent 60%),
+    radial-gradient(ellipse 35% 25% at 82% 65%, rgba(184,134,59,.12), transparent 60%);
+  pointer-events:none;
+}
+.cd-eyebrow{
+  letter-spacing:.25em;
+  font-size:.78rem;
+  font-weight:600;
+  color:var(--gold-soft);
+  margin-bottom:1rem;
+}
+.cd-hero-title{
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:clamp(2.6rem, 6vw, 5rem);
+  line-height:1.05;
+  color:#fff;
+  margin-bottom:1.4rem;
+  text-shadow:0 6px 30px rgba(0,0,0,.35);
+}
+.cd-hero-sub{
+  max-width:34rem;
+  font-size:1.05rem;
+  color:#EFE3CC;
+  line-height:1.7;
+  margin-bottom:2rem;
+}
+
+[data-reveal]{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
+[data-reveal].is-visible{opacity:1; transform:translateY(0);}
+.cd-hero [data-reveal]:nth-child(1){transition-delay:.1s;}
+.cd-hero [data-reveal]:nth-child(2){transition-delay:.25s;}
+.cd-hero [data-reveal]:nth-child(3){transition-delay:.4s;}
+.cd-hero [data-reveal]:nth-child(4){transition-delay:.55s;}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+.cd-btn-primary{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  padding:13px 26px;
+  background:var(--red);
+  border:1px solid var(--red);
+  border-radius:2px;
+  color:#fff;
+  font-family:var(--font-body);
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  transition:border-color .25s ease, color .25s ease, background .25s ease, transform .25s ease;
+}
+.cd-btn-primary:hover{
+  border-color:var(--red-dark);
+  color:#fff;
+  background:var(--red-dark);
+  transform:translateX(3px);
+}
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+.cd-section{padding:6rem 0;}
+.cd-section-alt{background:var(--parchment-2);}
+.cd-heading{max-width:40rem; margin:0 auto 3.5rem; text-align:center;}
+.cd-kicker{
+  display:inline-block;
+  font-size:.75rem;
+  letter-spacing:.2em;
+  font-weight:700;
+  color:var(--red);
+}
+.cd-heading h2{
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:clamp(1.8rem, 3.2vw, 2.6rem);
+  color:var(--brown);
+  margin:.5rem 0 1rem;
+}
+.cd-heading-copy{color:var(--brown-soft); font-size:1rem;}
+.cd-divider{
+  display:flex; align-items:center; justify-content:center; gap:.75rem;
+  color:var(--gold); margin-bottom:1rem;
+}
+.cd-divider span{width:48px; height:1px; background:var(--gold);}
+.cd-heading-light h2, .cd-heading-light .cd-kicker{color:var(--parchment);}
+.cd-heading-copy-light{color:#E7D6B4;}
+.cd-divider-light span, .cd-divider-light{color:var(--gold-soft);}
+.cd-divider-light span{background:var(--gold-soft);}
+
+/* =========================================================
+   GENERIC "IMAGE HOLDER" LABEL
+   Small pill telling YuYun what photo goes where. Delete the
+   <span class="cd-holder-label">…</span> once a real photo/
+   background-image has been added — it's not required.
+   ========================================================= */
+.cd-holder-label{
+  position:absolute;
+  top:.6rem; left:.6rem; right:.6rem;
+  z-index:3;
+  display:block;
+  font-size:.68rem;
+  letter-spacing:.03em;
+  text-align:center;
+  color:var(--brown-soft);
+  background:rgba(255,248,234,.85);
+  border:1px dashed rgba(59,37,23,.4);
+  border-radius:4px;
+  padding:.35rem .5rem;
+  pointer-events:none;
+}
+
+/* =========================================================
+   LANDMARK CARDS (photos already added by YuYun; reveal
+   one-by-one on scroll + image hover zoom kept as-is)
+   ========================================================= */
+.cd-landmark-card{
+  background:#fff8ea;
+  border:1px solid rgba(59,37,23,.12);
+  border-radius:8px;
+  overflow:hidden;
+  padding-bottom:1.5rem;
+  height:100%;
+  transition:transform .35s ease, box-shadow .35s ease, opacity .6s ease;
+}
+.cd-landmark-card[data-reveal]{transform:translateY(30px);}
+.cd-landmark-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 36px rgba(59,37,23,.16);
+}
+.cd-landmark-img{
+  height:170px;
+  position:relative;
+  display:flex; align-items:center; justify-content:center;
+  overflow:hidden;
+  transition:transform .4s ease;
+}
+.cd-landmark-img::after{
+  content:"";
+  position:absolute; inset:0;
+  background:rgba(28,17,10,.18);
+  transition:background .35s ease;
+}
+.cd-landmark-card:hover .cd-landmark-img::after{background:rgba(28,17,10,.06);}
+/* image "enlarges slightly" on hover */
+.cd-landmark-card:hover .cd-landmark-img{transform:scale(1.06);}
+
+.cd-img-teahouse{
+  background-image:url("../images/ChengDu/peopla\'s\ park.jpeg");
+  background-size:cover;
+  background-position:center;
+}
+.cd-img-panda{
+  background-image:url("../images/ChengDu/panda\ base.jpeg");
+  background-size:cover;
+  background-position:center;
+}
+.cd-img-alley{
+  background-image:url("../images/ChengDu/kuanzhai\ alley.jpeg");
+  background-size:cover;
+  background-position:center;
+}
+.cd-img-opera{
+  background-image:url("../images/ChengDu/sichuan\ oprea\ house.jpeg");
+  background-size:cover;
+  background-position:center;
+}
+
+.cd-landmark-card h3{
+  font-family:var(--font-display);
+  color:var(--brown); font-size:1.15rem;
+  margin:1.2rem 1.4rem .5rem;
+}
+.cd-landmark-card p{color:var(--brown-soft); font-size:.92rem; margin:0 1.4rem; line-height:1.55;}
+
+/* =========================================================
+   TIMELINE 2.0 — alternating photo cards (per YuYun's sketch)
+   Text sits INSIDE the photo as a bottom-gradient caption
+   overlay, not in a separate box underneath.
+   ========================================================= */
+.cd-timeline2{position:relative; max-width:56rem; margin:0 auto;}
+.cd-timeline2-line{
+  position:absolute; left:50%; top:0; bottom:0; width:2px;
+  background:rgba(59,37,23,.18); transform:translateX(-50%);
+}
+.cd-timeline2-progress{
+  width:100%; height:0%;
+  background:linear-gradient(180deg, var(--red), var(--gold));
+  transition:height .15s ease-out;
+}
+.cd-timeline2-item{
+  display:grid;
+  grid-template-columns: 1fr 40px 1fr;
+  align-items:center;
+  margin-bottom:3.5rem;
+  position:relative;
+}
+.cd-timeline2-item:last-child{margin-bottom:0;}
+.cd-timeline2-dot{
+  grid-column:2; justify-self:center;
+  width:16px; height:16px; border-radius:50%;
+  background:var(--parchment-2);
+  border:3px solid var(--brown-soft);
+  z-index:2;
+  transition:all .35s ease;
+}
+.cd-timeline2-item.is-active .cd-timeline2-dot{
+  background:var(--red); border-color:var(--red);
+  box-shadow:0 0 0 6px rgba(163,34,31,.18);
+  transform:scale(1.15);
+}
+
+.cd-photo-card{
+  position:relative;
+  aspect-ratio:4/3;
+  border-radius:10px;
+  overflow:hidden;
+  background:
+    repeating-linear-gradient(45deg, #ECD9B0 0 12px, #E4CB9C 12px 24px);
+  background-size:cover;
+  background-position:center;
+  box-shadow:0 6px 20px rgba(59,37,23,.1);
+  opacity:.5;
+  transform:translateY(10px);
+  transition:opacity .5s ease, transform .5s ease, box-shadow .4s ease, background-size .4s ease;
+}
+.cd-timeline2-item.is-active .cd-photo-card{
+  opacity:1; transform:translateY(0);
+  box-shadow:0 18px 40px rgba(59,37,23,.18);
+}
+.cd-photo-card:hover{background-size:112%;}
+
+/* Add your own photo for each stop like this:
+     .cd-img-morning{
+       background-image:url("tea-house.jpeg");
+       background-size:cover;
+       background-position:center;
+     }
+   Do NOT include a "background:" line (shorthand) — it resets
+   background-image back to none. Use background-size / background-position
+   only, as shown above.
+   Once a real photo is set, delete the matching
+   <span class="cd-holder-label">…</span> line in ChengDu.html. */
+.cd-img-morning{
+    background-image:url("../images/ChengDu/morning.jpeg");
+    background-size:cover;
+    background-position:center;
+}
+.cd-img-afternoon{
+    background-image:url("../images/ChengDu/afternoon.jpeg");
+    background-size:cover;
+    background-position:center;
+}
+.cd-img-evening{
+    background-image:url("../images/ChengDu/evening.jpeg");
+    background-size:cover;
+    background-position:center;
+}
+.cd-img-night{
+    background-image:url("../images/ChengDu/night.jpeg");
+    background-size:cover;
+    background-position:center;
+}
+
+/* folded photo corner, echoing the dog-ear in the sketch */
+.cd-photo-card::before{
+  content:"";
+  position:absolute; top:0; right:0;
+  width:0; height:0;
+  border-style:solid;
+  border-width:0 26px 26px 0;
+  border-color:transparent var(--parchment) transparent transparent;
+  filter:drop-shadow(-2px 2px 2px rgba(0,0,0,.2));
+  z-index:2;
+}
+
+/* words INSIDE the image — bottom gradient caption overlay */
+.cd-photo-caption-overlay{
+  position:absolute; left:0; right:0; bottom:0; z-index:2;
+  padding:2.5rem 1.3rem 1.2rem;
+  background:linear-gradient(180deg, transparent, rgba(20,12,7,.88) 65%);
+  color:#fff;
+}
+.cd-time-tag{
+  display:inline-block; font-size:.68rem; letter-spacing:.15em; font-weight:700;
+  color:var(--gold-soft); margin-bottom:.3rem;
+}
+.cd-photo-caption-overlay h3{
+  font-family:var(--font-display); font-size:1.2rem; margin-bottom:.35rem; color:#fff;
+}
+.cd-photo-caption-overlay p{margin:0; line-height:1.55; font-size:.85rem; color:#EFE3CC;}
+.cd-photo-caption-overlay a{color:var(--gold-soft); font-weight:600;}
+
+.cd-align-left .cd-photo-card{grid-column:1;}
+.cd-align-left .cd-spacer{grid-column:3;}
+.cd-align-right .cd-photo-card{grid-column:3;}
+.cd-align-right .cd-spacer{grid-column:1;}
+
+/* =========================================================
+   SPICE METER
+   ========================================================= */
+.cd-spice-section{
+  background:
+    linear-gradient(180deg, rgba(28,17,10,.92), rgba(28,17,10,.96)),
+    repeating-linear-gradient(60deg, #1c110a 0 30px, #241610 30px 60px);
+  color:var(--parchment);
+}
+.cd-spice-picker{
+  display:flex; flex-wrap:wrap; justify-content:center; gap:1rem;
+  margin-bottom:3rem;
+}
+.cd-spice-btn{
+  background:rgba(243,231,206,.06);
+  border:1px solid rgba(216,184,118,.35);
+  color:#E7D6B4;
+  padding:.7rem 1.3rem;
+  border-radius:999px;
+  font-weight:600;
+  font-size:.9rem;
+  display:flex; align-items:center; gap:.4rem;
+  transition:all .3s ease;
+}
+.cd-spice-btn i{color:var(--gold-soft); transition:color .3s ease;}
+.cd-spice-btn:hover{border-color:var(--gold-soft); background:rgba(216,184,118,.1);}
+.cd-spice-btn.active{
+  background:var(--red);
+  border-color:var(--red);
+  color:#fff;
+  box-shadow:0 10px 26px rgba(163,34,31,.4);
+}
+.cd-spice-btn.active i{color:#FFD9B0;}
+
+.cd-spice-card{
+  background:rgba(243,231,206,.05);
+  border:1px solid rgba(216,184,118,.2);
+  border-radius:10px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:all .35s ease;
+  height:100%;
+}
+.cd-spice-card:hover{
+  border-color:var(--gold-soft);
+  transform:translateY(-4px);
+}
+
+/* per-dish image holder — each card gets its own class from JS,
+   e.g. .cd-dish-dan-dan-noodles { background-image:url("..."); } */
+.cd-dish-img{
+  position:relative;
+  aspect-ratio:4/3;
+  background:repeating-linear-gradient(45deg, rgba(216,184,118,.14) 0 12px, rgba(216,184,118,.06) 12px 24px);
+  background-size:cover;
+  background-position:center;
+  transition:background-size .4s ease;
+}
+.cd-spice-card:hover .cd-dish-img{background-size:112%;}
+
+/* Dan Dan Noodles card photo — save a file called
+   "dan-dan-noodles.jpeg" in the same folder as this CSS file
+   and it will appear automatically on the Mild tab. */
+
+.cd-dish-dan-dan-noodles{
+  background-image:url("../images/ChengDu/dandanmian.jpeg");
+}
+ 
+/* All other dish photos — same idea. Save each file with the
+   exact name shown, in the same folder as this CSS file. */
+ 
+/* --- Mild tab --- */
+.cd-dish-zhong-dumplings{
+  background-image:url("../images/ChengDu/zhong\ dumplings.jpeg");
+}
+.cd-dish-clear-broth-side{
+  background-image:url("../images/ChengDu/Clear\ Broth\ Side.jpeg");
+}
+ 
+/* --- Medium tab --- */
+.cd-dish-kung-pao-chicken{
+  background-image:url("../images/ChengDu/kungbao\ chic.jpeg");
+}
+.cd-dish-mapo-tofu{
+  background-image:url("../images/ChengDu/mapo tofu.jpeg");
+}
+.cd-dish-twice-cooked-pork{
+  background-image:url("../images/ChengDu/twice-cooked pork.jpeg");
+}
+ 
+/* --- Sichuan Level tab --- */
+.cd-dish-mala-hotpot{
+  background-image:url("../images/ChengDu/mala hotpot.jpeg");
+}
+.cd-dish-spicy-rabbit-head{
+  background-image:url("../images/ChengDu/spicy rabbit head.jpeg");
+}
+.cd-dish-water-boiled-fish{
+  background-image:url("../images/ChengDu/water-boiled fish.jpeg");
+}
+ 
+/* --- Dangerous tab --- */
+.cd-dish-extra-mala-hotpot{
+  background-image:url("../images/ChengDu/extra-mala hotpot.jpeg");
+}
+.cd-dish-chongqing-style-dry-pot{
+  background-image:url("../images/ChengDu/chongqing-style dry pot.jpeg");
+}
+.cd-dish-chili-oil-cold-noodles{
+  background-image:url("../images/ChengDu/chili oil cold noodles.jpeg");
+}
+
+.cd-spice-card-body{padding:1.5rem;}
+.cd-spice-card h4{
+  font-family:var(--font-display);
+  font-size:1.1rem; margin-bottom:.4rem; color:#fff;
+}
+.cd-spice-card .cd-dish-tag{
+  font-size:.72rem; letter-spacing:.1em; color:var(--gold-soft); font-weight:700;
+}
+.cd-spice-more{
+  max-height:0; overflow:hidden; opacity:0;
+  transition:max-height .4s ease, opacity .35s ease, margin-top .35s ease;
+  font-size:.88rem; color:#E7D6B4; line-height:1.6; margin-top:0;
+}
+.cd-spice-card.is-open .cd-spice-more{
+  max-height:200px; opacity:1; margin-top:.9rem;
+}
+.cd-spice-card.is-open{
+  border-color:var(--red);
+  background:rgba(163,34,31,.12);
+}
+.cd-card-toggle{font-size:.75rem; color:var(--gold-soft); margin-top:.75rem; display:inline-block;}
+
+/* =========================================================
+   HOTPOT BUILDER
+   ========================================================= */
+.cd-hotpot-builder{max-width:56rem; margin:0 auto;}
+.cd-builder-label{
+  font-family:var(--font-display); font-size:1rem; color:var(--brown); margin-bottom:.9rem;
+}
+.cd-choice-group{display:flex; flex-direction:column; gap:.6rem;}
+.cd-choice{
+  background:#fff8ea;
+  border:1px solid rgba(59,37,23,.18);
+  color:var(--brown-soft);
+  border-radius:6px;
+  padding:.6rem .9rem;
+  text-align:left;
+  font-size:.88rem;
+  font-weight:500;
+  transition:all .25s ease;
+}
+.cd-choice:hover{border-color:var(--gold); color:var(--brown);}
+.cd-choice.active{
+  background:var(--brown);
+  border-color:var(--brown);
+  color:#fff;
+}
+
+.cd-hotpot-result{
+  max-width:34rem; margin:2.5rem auto 0;
+  text-align:center;
+  max-height:0; overflow:hidden; opacity:0;
+  transition:max-height .5s ease, opacity .4s ease;
+}
+.cd-hotpot-result.is-visible{max-height:400px; opacity:1;}
+.cd-hotpot-result-inner{
+  border-radius:10px;
+  padding:2rem;
+  border:1px solid rgba(184,134,59,.35);
+  transition:background .4s ease, border-color .4s ease, color .4s ease, box-shadow .4s ease;
+}
+.cd-hotpot-result-inner .cd-dish-emoji{font-size:2.4rem;}
+.cd-hotpot-result-inner h4{
+  font-family:var(--font-display); font-size:1.3rem; margin:.5rem 0;
+}
+.cd-hotpot-result-inner p{margin:0; line-height:1.6;}
+
+/* colour intensity scales with spice level chosen — more spicy = darker */
+.cd-result-mild{
+  background:linear-gradient(160deg,#FFF8EA,#F3E7CE);
+  border-color:rgba(184,134,59,.4);
+}
+.cd-result-mild h4{color:var(--brown);}
+.cd-result-mild p{color:var(--brown-soft);}
+
+.cd-result-sichuan{
+  background:linear-gradient(160deg,#C0392E,#7C1815);
+  border-color:#7C1815;
+  box-shadow:0 16px 40px rgba(124,24,21,.35);
+}
+.cd-result-sichuan h4{color:#FFE9D2;}
+.cd-result-sichuan p{color:#F6D9C4;}
+
+.cd-result-dangerous{
+  background:linear-gradient(160deg,#3B0E0C,#150605);
+  border-color:#A3221F;
+  box-shadow:0 20px 50px rgba(0,0,0,.5), 0 0 40px rgba(163,34,31,.35);
+}
+.cd-result-dangerous h4{color:#FF6A5C;}
+.cd-result-dangerous p{color:#E7C9B8;}
+
+/* =========================================================
+   BIANLIAN MASK
+   ========================================================= */
+.cd-bianlian-section{padding-bottom:7rem;}
+.cd-mask{
+    background-image:url("../images/ChengDu/bgbalck.jpeg");
+  position:relative;
+  width: 190px; height: 190px; border-radius:50%;
+  border:3px solid var(--gold);
+  
+  background-size:150%;
+  background-position:center;
+  overflow:hidden;
+  display:block;
+  margin:1rem auto 1rem;
+  cursor:pointer;
+  transition:transform .15s ease, box-shadow .25s ease, background-size .4s ease;
+  box-shadow:0 14px 32px rgba(163,34,31,.3);
+}
+.cd-mask:hover{transform:scale(1.05); background-size:140%;}
+.cd-mask.is-changing{transform:scale(.85) rotate(8deg);}
+.cd-mask .cd-holder-label{top:50%; transform:translateY(-50%); left:.5rem; right:.5rem;}
+.cd-mask-caption{color:var(--brown-soft); font-size:.9rem; margin-top:.5rem;}
+
+
+
+/* =========================
+   FOOTER LAYOUT
+========================= */
+
+.site-footer {
+  position: relative;
+  z-index: 9;
+
+  min-height: 110px;
+  padding: 12px 28px;
+
+  display: grid;
+  grid-template-columns:
+    auto
+    minmax(110px, 170px)
+    minmax(330px, 1fr)
+    minmax(110px, 170px)
+    auto;
+
+  align-items: center;
+  justify-content: stretch;
+column-gap: 10px;
+  overflow: visible;
+
+  color: #cdd6e0;
+  background: #0b2038;
+  border-top: 1px solid rgba(198, 162, 75, 0.35);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.site-footer .fbrand {
+  grid-column: 1;
+  justify-self: start;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.site-footer .footer-logo {
+  color: #f4efe4;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: 0.03em;
+}
+
+.site-footer .fseal {
+  width: 35px;
+  height: 43px;
+  padding: 3px;
+
+  display: grid;
+  place-items: center;
+
+  color: #d34839;
+  background: transparent;
+  border: 1.5px solid #bb3b30;
+  border-radius: 2px;
+
+  font-family: "Noto Serif SC", serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+}
+
+/* =========================
+   SYMMETRICAL LANDSCAPES
+========================= */
+
+.site-footer .footer-pattern {
+  width: 100%;
+  max-width: 230px;
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.site-footer .footer-pattern-left {
+  grid-column: 2;justify-self: end;
+  margin-right: -25px;
+}
+
+.site-footer .footer-pattern-right {
+  grid-column: 4; justify-self: start;
+  margin-left: -25px;
+}
+
+.site-footer .footer-pattern img {
+  width: 230px;
+  height: 82px;
+  display: block;
+
+  object-fit: contain;
+  mix-blend-mode: screen;
+}
+
+
+.site-footer .footer-pattern-left img {
+  transform: scale(1.8);
+  transform-origin: center;
+}
+
+.site-footer .footer-pattern-right img {
+  transform: scale(-1.8, 1.8);
+  transform-origin: center;
+}
+
+/* =========================
+   CENTRE MESSAGE
+========================= */
+
+.site-footer .ftag {
+  grid-column: 3;
+
+  min-width: 330px;
+  text-align: center;
+}
+
+.site-footer .ftag b {
+  display: block;
+
+  color: #d9c184;
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.site-footer .ftag p {
+  margin: 5px 0 0;
+
+  color: #aebac7;
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+.site-footer .fsocial {
+  grid-column: 5;
+  justify-self: end;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+
+  min-width: 158px;
+  overflow: visible;
+}
+
+.site-footer .fsocial a {
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+
+  display: grid;
+  place-items: center;
+
+  color: #d9c184;
+  border: 1.5px solid rgba(217, 193, 132, 0.72);
+  border-radius: 50%;
+  text-decoration: none;
+
+  visibility: visible;
+  opacity: 1;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.site-footer .fsocial a svg {
+  width: 20px;
+  height: 20px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.site-footer .fsocial .icon-dot {
+  fill: currentColor;
+  stroke: none;
+}
+
+.site-footer .fsocial a:hover,
+.site-footer .fsocial a:focus-visible {
+  color: #ffe08c;
+  background: rgba(198, 162, 75, 0.16);
+  border-color: #c6a24b;
+
+  box-shadow: 0 0 18px rgba(198, 162, 75, 0.28);
+  transform: translateY(-3px) scale(1.06);
+}
+
+/* =========================
+   FEEDBACK TOOLTIP
+========================= */
+
+.site-footer #feedbackFormLink::before {
+  position: absolute;
+  right: -12px;
+  bottom: calc(100% + 12px);
+
+  width: max-content;
+  max-width: 230px;
+  padding: 9px 12px;
+
+  content: attr(data-tooltip);
+
+  color: #f8f1df;
+  background: #102b47;
+  border: 1px solid rgba(217, 193, 132, 0.5);
+  border-radius: 8px;
+
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.35;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.site-footer #feedbackFormLink::after {
+  position: absolute;
+  right: 14px;
+  bottom: calc(100% + 6px);
+
+  width: 12px;
+  height: 12px;
+
+  content: "";
+
+  background: #102b47;
+  border-right: 1px solid rgba(217, 193, 132, 0.5);
+  border-bottom: 1px solid rgba(217, 193, 132, 0.5);
+
+  opacity: 0;
+  pointer-events: none;
+  transform: rotate(45deg);
+
+  transition: opacity 0.2s ease;
+}
+
+.site-footer #feedbackFormLink:hover::before,
+.site-footer #feedbackFormLink:hover::after,
+.site-footer #feedbackFormLink:focus-visible::before,
+.site-footer #feedbackFormLink:focus-visible::after {
+  opacity: 1;
+}
+
+.site-footer #feedbackFormLink:hover::before,
+.site-footer #feedbackFormLink:focus-visible::before {
+  transform: translateY(0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1180px) {
+  .site-footer {
+    grid-template-columns:
+      auto
+      minmax(80px, 130px)
+      minmax(280px, 1fr)
+      minmax(80px, 130px)
+      auto;
+
+    column-gap: 12px;
+    padding: 12px 18px;
+  }
+
+  .site-footer .footer-pattern {
+    max-width: 130px;
+  }
+
+  .site-footer .footer-pattern img {
+    width: 130px;
+  }
+
+  .site-footer .ftag {
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 820px) {
+  .site-footer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
+
+    padding: 28px 22px;
+  }
+
+  .site-footer .fbrand,
+  .site-footer .ftag,
+  .site-footer .fsocial {
+    grid-column: 1;
+  }
+
+  .site-footer .fbrand {
+    grid-row: 1;
+  }
+
+  .site-footer .ftag {
+    grid-row: 2;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .site-footer .fsocial {
+    grid-row: 3;
+    min-width: 0;
+    justify-content: center;
+  }
+
+  .site-footer .footer-pattern {
+    display: none;
+  }
+
+  .site-footer .ftag b {
+    white-space: normal;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width:767px){
+  .cd-section{padding:4rem 0;}
+
+  .cd-timeline2-item{grid-template-columns: 28px 1fr; margin-bottom:2.5rem;}
+  .cd-timeline2-line{left:14px; transform:none;}
+  .cd-timeline2-dot{grid-column:1;}
+  .cd-align-left .cd-photo-card, .cd-align-right .cd-photo-card{grid-column:2;}
+  .cd-align-left .cd-spacer, .cd-align-right .cd-spacer{display:none;}
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{transition-duration:.01ms !important; animation-duration:.01ms !important;}
+}
+
+a:focus-visible, button:focus-visible{
+  outline:2px solid var(--gold);
+  outline-offset:2px;
+}
