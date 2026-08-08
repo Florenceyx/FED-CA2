@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guilin · A Journey Along the Li River | China Unfolded</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital@1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../CSS/Guilin.css">
+</head>
+<body>
+
+<nav class="main-navbar">
+  <div class="brand">
+    <div class="logo">
+      <b>CHINA<br>UNFOLDED</b>
+      <span>One Country. Thousands of Stories.</span>
+    </div>
+
+    <div class="seal">
+      探游<br>中国
+    </div>
+  </div>
+
+  <div class="navlinks">
+   
+    <a href="./index.html" data-page="index.html">HOME</a>
+    <div class="nav-dropdown">
+      <a href="#" class="destination-link" aria-haspopup="true">DESTINATION</a>
+      <div class="destination-menu">
+        <a href="#">Beijing</a>
+        <a href="#">Xi'an</a>
+        <a href="./Shanghai.html">Shanghai</a>
+        <a href="./Shenzhen.html">Shenzhen</a>
+        <a href="./Chongqing.html">Chongqing</a>
+        <a href="#">Zhangjiajie</a>
+        <a href="./Guilin.html">Guilin</a>
+        <a href="./Chengdu.html">Chengdu</a>
+        <a href="./Yunnan.html">Yunnan</a>
+      </div>
+    </div>
+    <a href="./PlanYourJourney.html" data-page="PlanYourJourney.html">PLANNER</a>
+    <a href="./seasonalChina.html" data-page="seasonalChina.html">SEASONAL CHINA</a>
+  </div>
+
+  <button class="navtoggle" type="button" aria-label="Open navigation" aria-expanded="false">
+    &#9776;
+  </button>
+
+  </nav>
+
+
+<nav class="page-dots" id="pageDots" aria-label="Jump to section">
+  <button class="page-dot active" data-target="hero" aria-label="Home"><span aria-hidden="true">Home</span></button>
+  <button class="page-dot" data-target="journey" aria-label="The Journey"><span aria-hidden="true">Journey</span></button>
+  <button class="page-dot" data-target="video" aria-label="Watch"><span aria-hidden="true">Watch</span></button>
+  <button class="page-dot" data-target="food" aria-label="Flavours"><span aria-hidden="true">Flavours</span></button>
+  <button class="page-dot" data-target="itinerary" aria-label="One Day"><span aria-hidden="true">One Day</span></button>
+  <button class="page-dot" data-target="travel-tips" aria-label="Travel Gently"><span aria-hidden="true">Travel</span></button>
+</nav>
+
+<header id="hero" class="hero">
+  <div class="hero-sky"></div>
+  
+
+  <div class="hero-content">
+    <p class="eyebrow">GUILIN · NATURAL ROUTE</p>
+    <h1>A Journey<br><em>Along the</em><br>Li River</h1>
+    <p class="hero-desc">
+      Somewhere between Guilin and Yangshuo, a boat drifts through limestone
+      peaks that have been painted, poeticised and photographed for a
+      thousand years — and still look unlike anywhere else on earth.
+    </p>
+    <div class="hero-actions">
+      <a href="#journey" class="btn-primary">Set Sail <span>→</span></a>
+      <div class="seal-stamp" title="漓江 · Li River">漓江</div>
+    </div>
+  </div>
+
+  <button class="scroll-cue" id="scrollCue" aria-label="Scroll to the journey">
+    <span></span> Scroll
+  </button>
+</header>
+
+<main>
+
+<section id="journey" class="journey-section">
+  <div class="section-head">
+    <p class="eyebrow center">THE STORY</p>
+    <h2 class="section-title">Six Moments on the Water</h2>
+    <p class="section-sub">Scroll to follow the boat downriver — each bend has a story.</p>
+  </div>
+
+  <div class="journey-grid">
+
+    <div class="journey-visual" id="journeyVisual" data-stage="0">
+      <div class="visual-sky"></div>
+
+      <div class="visual-image-holder">
+        <img id="visualImage" src="../images/Guilin/story1.jpeg" alt="Where the Mist Begins">
+      </div>
+
+      <div class="stage-caption">
+        <span class="stage-index" id="stageIndex">01</span>
+        <span class="stage-name" id="stageName">Where the Mist Begins</span>
+      </div>
+
+      <div class="progress-dots" id="progressDots">
+        <button class="dot active" data-index="0" aria-label="Jump to story 1"></button>
+        <button class="dot" data-index="1" aria-label="Jump to story 2"></button>
+        <button class="dot" data-index="2" aria-label="Jump to story 3"></button>
+        <button class="dot" data-index="3" aria-label="Jump to story 4"></button>
+        <button class="dot" data-index="4" aria-label="Jump to story 5"></button>
+        <button class="dot" data-index="5" aria-label="Jump to story 6"></button>
+      </div>
+    </div>
+
+    <div class="journey-text">
+
+      <svg class="story-river" viewBox="0 0 400 1080" preserveAspectRatio="none" aria-hidden="true">
+        <path id="riverPath" d="M25,15 C160,70 70,160 210,220 C350,280 120,360 260,430
+                                  C390,495 130,560 270,630 C390,690 140,760 270,825
+                                  C380,880 160,930 290,985 C360,1020 250,1050 375,1070" />
+      </svg>
+
+
+      <article class="story-block" data-index="0">
+        <span class="story-num">01</span>
+        <h3>Where the Mist Begins</h3>
+        <p>The cruise pushes off before the fog has fully lifted. One by one, limestone peaks rise out of the haze like ink strokes on wet paper — some say every shape holds a story: an elephant drinking, a brush resting, a phoenix taking flight.</p>
+      </article>
+
+      <article class="story-block" data-index="1">
+        <span class="story-num">02</span>
+        <h3>Yangshuo</h3>
+        <p>By mid-morning the river slows and the town appears, low rooftops tucked beneath towering cliffs. Cafés spill onto the pier, cormorant fishermen mend their nets, and West Street hums quietly before the evening crowds arrive.</p>
+      </article>
+
+      <article class="story-block" data-index="2">
+        <span class="story-num">03</span>
+        <h3>Bamboo Rafting</h3>
+        <p>Past Yangshuo, the big cruise gives way to something smaller — a raft of lashed bamboo poles, poled by hand through shallow, glassy water. The peaks feel close enough here to touch.</p>
+      </article>
+
+      <article class="story-block" data-index="3">
+        <span class="story-num">04</span>
+        <h3>Villages Along the Bank</h3>
+        <p>Water buffalo wade in the shallows. Elderly farmers wave from doorways. Fishing nets dry on wooden racks outside stilted houses that have watched the river pass for generations, largely unchanged.</p>
+      </article>
+
+      <article class="story-block" data-index="4">
+        <span class="story-num">05</span>
+        <h3>Terraces in the Distance</h3>
+        <p>Inland, the land climbs into rice terraces layered like contour lines up the hillside, flooded fields catching the afternoon light in long silver ribbons — worked exactly as they were generations ago.</p>
+      </article>
+
+      <article class="story-block" data-index="5">
+        <span class="story-num">06</span>
+        <h3>Where the River Rests</h3>
+        <p>As the sun drops behind the last row of peaks, the water turns the colour of tea. Fishermen light lanterns on their rafts, and for a moment the whole valley seems to hold its breath before nightfall.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= SHORT VIDEO ================= -->
+<section id="video" class="section video-section">
+    <div class="section-head">
+        <p class="eyebrow center">WATCH THE JOURNEY</p>
+
+        <h2 class="section-title">A Glimpse Along the Li River</h2>
+
+        <p class="section-sub">
+            Watch a short video before exploring the local food.
+        </p>
+    </div>
+
+    <div class="video-card-holder">
+        <div class="video-card" id="videoCard">
+          <video class="video-poster" src="../videos/Guilin/liriver.mp4" controls playsinline></video>
+    </div>
+</section>
+
+<!-- ================= TASTE THE RIVERBANK ================= -->
+<section id="food" class="section food-section">
+  <div class="section-head">
+    <p class="eyebrow center">LOCAL FLAVOURS</p>
+    <h2 class="section-title">Taste the Riverbank</h2>
+    <p class="section-sub">Tap a dish to read its story.</p>
+  </div>
+
+  <div class="food-grid">
+    <button class="food-item" data-title="Guilin Rice Noodles" data-description="The city's signature breakfast: silky rice noodles in a savoury broth, finished with peanuts, pickled beans and crackling toppings.">
+      <span class="food-thumb" aria-hidden="true"><img src="../images/Guilin/ricenoodles.jpeg" alt="Guilin Rice Noodles"></span>
+      <span class="food-name">Rice Noodles</span>
+    </button>
+
+    <button class="food-item" data-title="Beer Fish" data-description="Fresh Li River fish, simmered with local beer, tomatoes, chilli and pickled ginger — a Yangshuo speciality best eaten riverside.">
+      <span class="food-thumb" aria-hidden="true"><img src="../images/Guilin/beerfish.jpeg" alt="Beer Fish"></span>
+      <span class="food-name">Beer Fish</span>
+    </button>
+
+    <button class="food-item" data-title="Oil Tea" data-description="A savoury Yao ethnic tea, pounded with tea leaves and ginger, served with puffed rice, peanuts and spring onion.">
+      <span class="food-thumb" aria-hidden="true"><img src="../images/Guilin/oiltea.jpeg" alt="Oil Tea"></span>
+      <span class="food-name">Oil Tea</span>
+    </button>
+
+    <button class="food-item" data-title="Stuffed River Snails" data-description="River snails stuffed with minced pork and herbs, simmered in a spiced broth — a beloved Guilin street food.">
+      <span class="food-thumb" aria-hidden="true"><img src="../images/Guilin/riversnails.jpeg" alt="Stuffed Snails"></span>
+      <span class="food-name">Stuffed Snails</span>
+    </button>
+
+    <button class="food-item" data-title="Osmanthus Cake" data-description="A soft, sweet cake scented with Guilin's famous osmanthus flowers, in bloom across the city every autumn.">
+      <span class="food-thumb" aria-hidden="true"><img src="../images/Guilin/osmanthuscake.jpeg" alt="Osmanthus Cake"></span>
+      <span class="food-name">Osmanthus Cake</span>
+    </button>
+  </div>
+</section>
+
+<div class="food-modal" id="foodModal" aria-hidden="true">
+  <div class="food-modal-backdrop" id="modalBackdrop"></div>
+  <div class="food-modal-card" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+    <span class="modal-thumb" aria-hidden="true"><img id="modalImage" src="" alt=""></span>
+    <h4 id="foodTitle"></h4>
+    <p id="foodDescription"></p>
+  </div>
+</div>
+
+<section id="itinerary" class="section itinerary-section">
+  <div class="section-head">
+    <p class="eyebrow center">PLAN YOUR DAY</p>
+    <h2 class="section-title">One Day Along the River</h2>
+    <p class="section-sub">A gentle pace, best kept unhurried.</p>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-track"><div class="timeline-fill" id="timelineFill"></div></div>
+
+    <div class="timeline-item" data-index="0">
+      <span class="t-dot"></span>
+      <div class="timeline-card">
+        <span class="t-time">06:30</span>
+        <h5>Board the Cruise</h5>
+        <p>Depart Guilin as the morning mist still clings to the water.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item" data-index="1">
+      <span class="t-dot"></span>
+      <div class="timeline-card">
+        <span class="t-time">09:30</span>
+        <h5>Karst Peaks &amp; Cormorants</h5>
+        <p>Drift past the river's most iconic limestone scenery.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item" data-index="2">
+      <span class="t-dot"></span>
+      <div class="timeline-card">
+        <span class="t-time">12:00</span>
+        <h5>Arrive in Yangshuo</h5>
+        <p>Lunch on beer fish beside the pier.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item" data-index="3">
+      <span class="t-dot"></span>
+      <div class="timeline-card">
+        <span class="t-time">15:00</span>
+        <h5>Bamboo Raft &amp; Cycling</h5>
+        <p>Glide through the countryside at water level.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item" data-index="4">
+      <span class="t-dot"></span>
+      <div class="timeline-card">
+        <span class="t-time">18:00</span>
+        <h5>Sunset at Xingping</h5>
+        <p>Watch the peaks turn gold from the riverbank.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="travel-tips" class="section travel-section">
+  <div class="section-head">
+    <p class="eyebrow center">TRAVEL GENTLY</p>
+    <h2 class="section-title">Leave the River as </h2>
+    <h2 class="section-title">You Found It</h2>
+    <p class="section-sub">The Li River sustains fishing villages and rice paddies long after the last cruise of the day.</p>
+  </div>
+
+  <div class="tips-grid">
+    <div class="tip-card">
+      <span class="tip-mark">01</span>
+      <h5>Mind the Water</h5>
+      <p>Skip single-use plastics on board and choose reef-safe sunscreen — the same water irrigates the rice terraces downstream.</p>
+    </div>
+    <div class="tip-card">
+      <span class="tip-mark">02</span>
+      <h5>Support the Villages</h5>
+      <p>Buy tea, snacks and handicrafts directly from riverside stalls rather than large tour-operator shops.</p>
+    </div>
+    <div class="tip-card">
+      <span class="tip-mark">03</span>
+      <h5>Respect the Fishermen</h5>
+      <p>Cormorant fishing displays are staged for visitors — tip fairly, and always ask before photographing someone at work.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+
+  <!-- Left: Logo -->
+  <div class="fbrand">
+    <div class="footer-logo">
+      CHINA<br>UNFOLDED
+    </div>
+
+    <div class="fseal">
+      探游<br>中国
+    </div>
+  </div>
+
+  <!-- Left landscape -->
+  <div class="footer-pattern footer-pattern-left">
+    <img
+      src="../images/image/footer-pattern.png"
+      alt=""
+      aria-hidden="true"
+    >
+  </div>
+
+  <!-- Middle content -->
+  <div class="ftag">
+    <b>EXPLORE. DISCOVER. UNDERSTAND.</b>
+    <p>Every journey reveals a different side of China.</p>
+  </div>
+
+  <!-- Right landscape -->
+  <div class="footer-pattern footer-pattern-right">
+    <img
+      src="../images/image/footer-pattern.png"
+      alt=""
+      aria-hidden="true"
+    >
+  </div>
+
+  <!-- Right icons -->
+  <div class="fsocial">
+
+    <!-- Feedback -->
+    <a
+      href="./feedback.html"
+      id="feedbackFormLink"
+      aria-label="Give website feedback"
+      data-tooltip="Help us improve — share your feedback!"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6 3.5h9.5L19 7v13.5H6z"></path>
+        <path d="M15.5 3.5V7H19"></path>
+        <path d="M9 11h7M9 14.5h7M9 18h4"></path>
+      </svg>
+    </a>
+
+    <!-- Instagram -->
+    <a
+      href="#"
+      id="shareInstagram"
+      aria-label="Share on Instagram"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+        <circle cx="12" cy="12" r="4"></circle>
+        <circle class="icon-dot" cx="17.5" cy="6.5" r="1"></circle>
+      </svg>
+    </a>
+
+    <!-- WhatsApp -->
+    <a
+      href="#"
+      id="shareWhatsApp"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Share on WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20 11.7a8 8 0 0 1-11.8 7L4 20l1.3-4.1A8 8 0 1 1 20 11.7z"></path>
+        <path d="M9 8.2c.3-.4.6-.4.9-.1l1 1.4c.2.3.2.6 0 .9l-.6.7c.8 1.6 1.9 2.7 3.5 3.5l.7-.7c.3-.3.6-.3.9-.1l1.3.9c.4.3.4.6.2 1-.5.8-1.3 1.2-2.2 1.1-3.9-.5-7-3.6-7.5-7.5-.1-.4.2-.8.8-1.1z"></path>
+      </svg>
+    </a>
+
+  </div>
+
+</footer>
+
+
+<script src="../JS/Guilin.js"></script>
+</body>
+</html>
