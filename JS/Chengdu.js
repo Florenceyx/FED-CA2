@@ -1,29 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-/* ==================================
-   PAGE DOTS (right-side jump nav)
-   =================================== */
-const pageDots = document.querySelectorAll('.yn-page-dot');
-const dotSections = Array.from(pageDots).map(dot => document.getElementById(dot.dataset.target));
-
-pageDots.forEach(dot => {
-  dot.addEventListener('click', () => {
-    const target = document.getElementById(dot.dataset.target);
-    if (target) target.scrollIntoView({ behavior: 'smooth' });
-  });
-});
-
-const dotObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const index = dotSections.indexOf(entry.target);
-      pageDots.forEach(d => d.classList.remove('active'));
-      if (index !== -1) pageDots[index].classList.add('active');
-    }
-  });
-}, { threshold: 0.5 });
-
-dotSections.forEach(section => { if (section) dotObserver.observe(section); });
   
   /* =====================================================
      Helper — turn a dish name into a CSS-safe class name
