@@ -10,11 +10,16 @@
   --brown-soft:  #6B4A34;
   --red:         #A3221F;
   --red-dark:    #7C1815;
-  --gold:        #B8863B;
-  --gold-soft:   #D8B876;
+  --gold:        #c68522;
+  --gold-soft:   #ae8534;
   --font-display:'Playfair Display', serif;
   --font-script: 'Cormorant Garamond', serif;
   --font-body:   'Inter', sans-serif;
+
+  /* aliases used by the nav brand/seal (kept consistent with footer) */
+  --serif: var(--font-display);
+  --sans:  var(--font-body);
+  --sc:    'Noto Serif SC', serif;
 }
 
 *{box-sizing:border-box;}
@@ -365,28 +370,18 @@ a{text-decoration:none;}
    BUTTONS
    ========================================================= */
 .cd-btn-primary{
-  display:inline-flex;
-  align-items:center;
-  gap:12px;
   padding:13px 26px;
-  background:var(--red);
-  border:1px solid var(--red);
-  border-radius:2px;
-  color:#fff;
-  font-family:var(--font-body);
-  font-size:12px;
-  font-weight:500;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  transition:border-color .25s ease, color .25s ease, background .25s ease, transform .25s ease;
+  background:rgba(218, 51, 51, 0.484);
+  border:1px solid rgba(103, 14, 14, 0.537);
+  gap:12px;
+  font-size:12px; letter-spacing:2px; text-transform:uppercase; font-weight:500;
 }
 .cd-btn-primary:hover{
-  border-color:var(--red-dark);
-  color:#fff;
-  background:var(--red-dark);
+  border-color:var(--gold-soft);
+  color:var(--gold-soft);
+  background:rgba(184,134,59,.18);
   transform:translateX(3px);
 }
-
 /* =========================================================
    SECTION HEADINGS
    ========================================================= */
@@ -417,28 +412,6 @@ a{text-decoration:none;}
 .cd-heading-copy-light{color:#E7D6B4;}
 .cd-divider-light span, .cd-divider-light{color:var(--gold-soft);}
 .cd-divider-light span{background:var(--gold-soft);}
-
-/* =========================================================
-   GENERIC "IMAGE HOLDER" LABEL
-   Small pill telling YuYun what photo goes where. Delete the
-   <span class="cd-holder-label">…</span> once a real photo/
-   background-image has been added — it's not required.
-   ========================================================= */
-.cd-holder-label{
-  position:absolute;
-  top:.6rem; left:.6rem; right:.6rem;
-  z-index:3;
-  display:block;
-  font-size:.68rem;
-  letter-spacing:.03em;
-  text-align:center;
-  color:var(--brown-soft);
-  background:rgba(255,248,234,.85);
-  border:1px dashed rgba(59,37,23,.4);
-  border-radius:4px;
-  padding:.35rem .5rem;
-  pointer-events:none;
-}
 
 /* =========================================================
    LANDMARK CARDS (photos already added by YuYun; reveal
@@ -698,6 +671,7 @@ a{text-decoration:none;}
    exact name shown, in the same folder as this CSS file. */
  
 /* --- Mild tab --- */
+ 
 .cd-dish-zhong-dumplings{
   background-image:url("../images/ChengDu/zhong\ dumplings.jpeg");
 }
@@ -850,7 +824,6 @@ a{text-decoration:none;}
 }
 .cd-mask:hover{transform:scale(1.05); background-size:140%;}
 .cd-mask.is-changing{transform:scale(.85) rotate(8deg);}
-.cd-mask .cd-holder-label{top:50%; transform:translateY(-50%); left:.5rem; right:.5rem;}
 .cd-mask-caption{color:var(--brown-soft); font-size:.9rem; margin-top:.5rem;}
 
 
