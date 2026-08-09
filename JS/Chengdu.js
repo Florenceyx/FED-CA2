@@ -1,5 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+/* ==================================
+   PAGE DOTS (right-side jump nav)
+   =================================== */
+const pageDots = document.querySelectorAll('.yn-page-dot');
+const dotSections = Array.from(pageDots).map(dot => document.getElementById(dot.dataset.target));
+
+pageDots.forEach(dot => {
+  dot.addEventListener('click', () => {
+    const target = document.getElementById(dot.dataset.target);
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+const dotObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const index = dotSections.indexOf(entry.target);
+      pageDots.forEach(d => d.classList.remove('active'));
+      if (index !== -1) pageDots[index].classList.add('active');
+    }
+  });
+}, { threshold: 0.5 });
+
+dotSections.forEach(section => { if (section) dotObserver.observe(section); });
+  
   /* =====================================================
      Helper — turn a dish name into a CSS-safe class name
      e.g. "Dan Dan Noodles" -> "cd-dish-dan-dan-noodles"
@@ -11,14 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* =====================================================
-     1) HERO — reveal-on-load
+     HERO — reveal-on-load
      ===================================================== */
   document.querySelectorAll('.cd-hero [data-reveal]').forEach(el => {
     requestAnimationFrame(() => el.classList.add('is-visible'));
   });
 
   /* =====================================================
-     2) LANDMARKS — cards appear one by one on scroll
+     LANDMARKS — cards appear one by one on scroll
      ===================================================== */
   const landmarkCards = document.querySelectorAll('#landmarks [data-reveal]');
   const landmarkObserver = new IntersectionObserver((entries) => {
@@ -33,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   landmarkCards.forEach(card => landmarkObserver.observe(card));
 
   /* =====================================================
-     3) ITINERARY — alternating photo timeline
+     ITINERARY — alternating photo timeline
         Active item highlighted + progress line fill
      ===================================================== */
   const timelineItems = document.querySelectorAll('.cd-timeline2-item');
@@ -60,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateTimelineProgress();
 
   /* =====================================================
-     4) SPICE METER — each dish card gets its own image
+    SPICE METER — each dish card gets its own image
         holder class (see slugify above) + expands with
         more info when tapped/selected
      ===================================================== */
