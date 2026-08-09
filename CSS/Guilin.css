@@ -441,3 +441,60 @@ p{line-height:1.75;color:var(--text-cream-dim);}
   color:var(--text-ink-dim);text-decoration:underline;text-underline-offset:3px;
 }
 .video-fallback-link:hover{color:var(--accent-gold-dark);}
+/* Guilin section navigation: compact side dots instead of unstyled buttons. */
+.page-dots {
+  position: fixed;
+  top: 50%;
+  right: 18px;
+  z-index: 24;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transform: translateY(-50%);
+}
+
+.page-dot {
+  position: relative;
+  width: 11px;
+  height: 11px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 50%;
+  background: rgba(22, 46, 52, 0.45);
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.page-dot.active,
+.page-dot:hover,
+.page-dot:focus-visible {
+  background: #d8ad5c;
+  transform: scale(1.25);
+}
+
+.page-dot span {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: max-content;
+  padding: 5px 8px;
+  border-radius: 5px;
+  color: #fff;
+  background: rgba(15, 37, 43, 0.9);
+  font: 500 11px/1.2 "Inter", sans-serif;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(5px, -50%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.page-dot:hover span,
+.page-dot:focus-visible span {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+@media (max-width: 720px) {
+  .page-dots { display: none; }
+}

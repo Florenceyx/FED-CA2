@@ -48,7 +48,7 @@
     display:flex; align-items:center;
     background:
       linear-gradient(120deg, rgba(22,15,10,.75) 0%, rgba(22,15,10,.55) 40%, rgba(74,50,32,.65) 100%),
-      url('../images/hero.jpg') center center / cover no-repeat;
+      url('../images/xi an images/hero.jpg') center center / cover no-repeat;
     overflow:hidden;
 }
   .hero::before{

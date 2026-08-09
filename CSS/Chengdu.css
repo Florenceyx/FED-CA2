@@ -48,7 +48,7 @@ a{text-decoration:none;}
   background:
     linear-gradient(100deg, rgba(28,17,10,.85) 0%, rgba(28,17,10,.6) 40%, rgba(28,17,10,.15) 70%, transparent 100%),
     linear-gradient(180deg, rgba(28,17,10,.3) 0%, rgba(28,17,10,.55) 70%, var(--parchment) 100%),
-    url("../images/ChengDu/hero.jpeg") center/cover no-repeat;
+    url("../images/Chengdu/hero.jpeg") center/cover no-repeat;
   background-color:#241610; /* shows while the photo loads, and if the path is ever wrong */
   color:var(--parchment);
 }
@@ -173,22 +173,22 @@ a{text-decoration:none;}
 .cd-landmark-card:hover .cd-landmark-img{transform:scale(1.06);}
 
 .cd-img-teahouse{
-  background-image:url("../images/ChengDu/peopla\'s\ park.jpeg");
+  background-image:url("../images/Chengdu/peopla\'s\ park.jpeg");
   background-size:cover;
   background-position:center;
 }
 .cd-img-panda{
-  background-image:url("../images/ChengDu/panda\ base.jpeg");
+  background-image:url("../images/Chengdu/panda\ base.jpeg");
   background-size:cover;
   background-position:center;
 }
 .cd-img-alley{
-  background-image:url("../images/ChengDu/kuanzhai\ alley.jpeg");
+  background-image:url("../images/Chengdu/kuanzhai\ alley.jpeg");
   background-size:cover;
   background-position:center;
 }
 .cd-img-opera{
-  background-image:url("../images/ChengDu/sichuan\ oprea\ house.jpeg");
+  background-image:url("../images/Chengdu/sichuan\ oprea\ house.jpeg");
   background-size:cover;
   background-position:center;
 }
@@ -269,22 +269,22 @@ a{text-decoration:none;}
    Once a real photo is set, delete the matching
    <span class="cd-holder-label">…</span> line in ChengDu.html. */
 .cd-img-morning{
-    background-image:url("../images/ChengDu/morning.jpeg");
+    background-image:url("../images/Chengdu/morning.jpeg");
     background-size:cover;
     background-position:center;
 }
 .cd-img-afternoon{
-    background-image:url("../images/ChengDu/afternoon.jpeg");
+    background-image:url("../images/Chengdu/afternoon.jpeg");
     background-size:cover;
     background-position:center;
 }
 .cd-img-evening{
-    background-image:url("../images/ChengDu/evening.jpeg");
+    background-image:url("../images/Chengdu/evening.jpeg");
     background-size:cover;
     background-position:center;
 }
 .cd-img-night{
-    background-image:url("../images/ChengDu/night.jpeg");
+    background-image:url("../images/Chengdu/night.jpeg");
     background-size:cover;
     background-position:center;
 }
@@ -388,7 +388,7 @@ a{text-decoration:none;}
    and it will appear automatically on the Mild tab. */
 
 .cd-dish-dan-dan-noodles{
-  background-image:url("../images/ChengDu/dandanmian.jpeg");
+  background-image:url("../images/Chengdu/dandanmian.jpeg");
 }
  
 /* All other dish photos — same idea. Save each file with the
@@ -397,43 +397,43 @@ a{text-decoration:none;}
 /* --- Mild tab --- */
  
 .cd-dish-zhong-dumplings{
-  background-image:url("../images/ChengDu/zhong\ dumplings.jpeg");
+  background-image:url("../images/Chengdu/zhong\ dumplings.jpeg");
 }
 .cd-dish-clear-broth-side{
-  background-image:url("../images/ChengDu/Clear\ Broth\ Side.jpeg");
+  background-image:url("../images/Chengdu/Clear\ Broth\ Side.jpeg");
 }
  
 /* --- Medium tab --- */
 .cd-dish-kung-pao-chicken{
-  background-image:url("../images/ChengDu/kungbao\ chic.jpeg");
+  background-image:url("../images/Chengdu/kungbao\ chic.jpeg");
 }
 .cd-dish-mapo-tofu{
-  background-image:url("../images/ChengDu/mapo tofu.jpeg");
+  background-image:url("../images/Chengdu/mapo tofu.jpeg");
 }
 .cd-dish-twice-cooked-pork{
-  background-image:url("../images/ChengDu/twice-cooked pork.jpeg");
+  background-image:url("../images/Chengdu/twice-cooked pork.jpeg");
 }
  
 /* --- Sichuan Level tab --- */
 .cd-dish-mala-hotpot{
-  background-image:url("../images/ChengDu/mala hotpot.jpeg");
+  background-image:url("../images/Chengdu/mala hotpot.jpeg");
 }
 .cd-dish-spicy-rabbit-head{
-  background-image:url("../images/ChengDu/spicy rabbit head.jpeg");
+  background-image:url("../images/Chengdu/spicy rabbit head.jpeg");
 }
 .cd-dish-water-boiled-fish{
-  background-image:url("../images/ChengDu/water-boiled fish.jpeg");
+  background-image:url("../images/Chengdu/water-boiled fish.jpeg");
 }
  
 /* --- Dangerous tab --- */
 .cd-dish-extra-mala-hotpot{
-  background-image:url("../images/ChengDu/extra-mala hotpot.jpeg");
+  background-image:url("../images/Chengdu/extra-mala hotpot.jpeg");
 }
 .cd-dish-chongqing-style-dry-pot{
-  background-image:url("../images/ChengDu/chongqing-style dry pot.jpeg");
+  background-image:url("../images/Chengdu/chongqing-style dry pot.jpeg");
 }
 .cd-dish-chili-oil-cold-noodles{
-  background-image:url("../images/ChengDu/chili oil cold noodles.jpeg");
+  background-image:url("../images/Chengdu/chili oil cold noodles.jpeg");
 }
 
 .cd-spice-card-body{padding:1.5rem;}
@@ -532,7 +532,7 @@ a{text-decoration:none;}
    ========================================================= */
 .cd-bianlian-section{padding-bottom:7rem;}
 .cd-mask{
-    background-image:url("../images/ChengDu/bgbalck.jpeg");
+    background-image:url("../images/Chengdu/bgbalck.jpeg");
   position:relative;
   width: 190px; height: 190px; border-radius:50%;
   border:3px solid var(--gold);

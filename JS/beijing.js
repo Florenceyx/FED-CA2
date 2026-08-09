@@ -1,5 +1,5 @@
 function photoBox(file, alt){
-  const src = `../images/${file}.jpg`;
+  const src = `../images/beijing images/${file}.jpg`;
   return `<div class="photo-frame" data-file="${src}">
       <img src="${src}" alt="${alt}" loading="lazy" onerror="this.remove(); this.parentElement.classList.add('img-missing')">
     </div>`;

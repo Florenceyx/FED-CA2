@@ -104,6 +104,17 @@ const SEASONS=[
    blurb:'Snowy landscapes, cozy cities and warm food. Ideal for fewer crowds and peaceful, unhurried journeys.'}
 ];
 const CITY_ORDER=['Beijing','Shanghai','Shenzhen','Chongqing','Guilin','Zhangjiajie',"Xi'an",'Yunnan','Chengdu'];
+const CITY_PAGES={
+  Beijing:'./Beijing.html',
+  Shanghai:'./Shanghai.html',
+  Shenzhen:'./Shenzhen.html',
+  Chongqing:'./Chongqing.html',
+  Guilin:'./Guilin.html',
+  Zhangjiajie:'./Zhangjiajie.html',
+  "Xi'an":"./Xi'an.html",
+  Yunnan:'./Yunnan.html',
+  Chengdu:'./Chengdu.html'
+};
 const CITY_META={
   Beijing:{land:'wall',seed:0.6}, Shanghai:{land:'skyline',seed:4.4}, Shenzhen:{land:'skyline',seed:3.3},
   Chongqing:{land:'skyline',seed:1.8}, Guilin:{land:'karst',seed:2.7}, Zhangjiajie:{land:'pillars',seed:1.1},
@@ -231,7 +242,9 @@ SEASONS.forEach(s=>{
   const meta = CITY_META[city];
   const c = COPY[s.id][city];
 
-  const imageFile = city === "Xi'an" ? "Xian.jpeg" : `${city}.jpeg`;
+  let imageFile = city === "Xi'an" ? "Xian.jpeg" : `${city}.jpeg`;
+  if(s.id === 'autumn' && city === 'Yunnan') imageFile = 'yunnan.jpeg';
+  if(s.id === 'winter' && city === 'Guilin') imageFile = 'guilin.jpeg';
 
 const bg =
   s.id === 'spring'
@@ -253,7 +266,7 @@ const bg =
         <div class="pin"><span style="color:${s.color}">${ICONS.pin}</span>${city}</div>
         <div class="tag">${c.tag}</div>
       </div>
-      <div class="desc"><p class="dtext">${c.desc}</p><span class="more">Explore ${city} &#8594;</span></div>
+      <div class="desc"><p class="dtext">${c.desc}</p><a class="more" href="${CITY_PAGES[city]}" aria-label="Explore ${city}">Explore ${city} &#8594;</a></div>
     </div>`;
   }).join('');
   row.innerHTML=`
@@ -310,7 +323,10 @@ function initCarousel(wrap){
   const endDrag=()=>{if(dragging){dragging=false;track.classList.remove('dragging');}};
   track.addEventListener('pointerup',endDrag);
   track.addEventListener('pointercancel',endDrag);
-  track.addEventListener('click',e=>{if(moved>6){e.preventDefault();e.stopPropagation();}},true);
+  track.addEventListener('click',e=>{
+    if (e.target.closest('a.more')) return;
+    if(moved>6){e.preventDefault();e.stopPropagation();}
+  },true);
   wrap.addEventListener('wheel',e=>{
     const d=Math.abs(e.deltaX)>Math.abs(e.deltaY)?e.deltaX:(e.shiftKey?e.deltaY:0);
     if(!d) return;                 // vertical intent: let the page scroll

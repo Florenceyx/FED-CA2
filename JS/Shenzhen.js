@@ -3,8 +3,11 @@
 
   /* ---------- Navbar on scroll ---------- */
   const nav = document.getElementById('siteNav');
-  function updateNav(){ nav.classList.toggle('scrolled', window.scrollY > 40); }
-  window.addEventListener('scroll', updateNav, {passive:true}); updateNav();
+  function updateNav(){ if (nav) nav.classList.toggle('scrolled', window.scrollY > 40); }
+  if (nav) {
+    window.addEventListener('scroll', updateNav, {passive:true});
+    updateNav();
+  }
 
   /* ---------- Connected journey line + drone flight ---------- */
   const track = document.getElementById('journeyTrack');

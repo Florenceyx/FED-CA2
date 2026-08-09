@@ -1,0 +1,56 @@
+:root {
+  --ink: #172b45;
+  --gold: #c6a24b;
+  --serif: "Playfair Display", serif;
+  --sans: "Inter", sans-serif;
+  --sc: "Noto Serif SC", serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: #f4efe4; font-family: var(--sans); }
+
+.cq-hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  color: #fffaf0;
+  background: url("../images/Chongqing/Chongqing.jpg") center 55% / cover no-repeat;
+}
+
+.cq-hero-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(16, 22, 31, 0.82), rgba(16, 22, 31, 0.18) 70%);
+}
+
+.cq-hero-content { position: relative; z-index: 1; padding-bottom: 10vh; }
+.cq-kicker { margin: 0 0 14px; color: #dcb45f; font-size: 12px; font-weight: 600; letter-spacing: .22em; }
+.cq-hero h1 { margin: 0; font-family: var(--serif); font-size: clamp(64px, 10vw, 140px); line-height: .9; }
+.cq-hero-content > p:not(.cq-kicker) { max-width: 540px; margin: 24px 0; font-size: clamp(17px, 2vw, 23px); }
+.cq-button { padding: 12px 24px; border: 1px solid #dcb45f; border-radius: 999px; color: #fffaf0; background: rgba(18, 33, 48, .72); }
+.cq-button:hover, .cq-button:focus-visible { color: #172b45; background: #dcb45f; }
+
+.cq-main { padding: 88px 0 96px; }
+.cq-heading { max-width: 650px; margin: 0 auto 44px; text-align: center; }
+.cq-heading h2 { margin: 0 0 14px; font-family: var(--serif); font-size: clamp(38px, 5vw, 62px); }
+.cq-heading > p:last-child { color: #607080; }
+.cq-card { height: 100%; overflow: hidden; border: 1px solid rgba(23, 43, 69, .12); border-radius: 16px; background: #fffaf0; box-shadow: 0 18px 45px rgba(23, 43, 69, .1); opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease, box-shadow .25s ease; }
+.cq-card.in { opacity: 1; transform: translateY(0); }
+.cq-card:hover { transform: translateY(-7px); box-shadow: 0 25px 55px rgba(23, 43, 69, .17); }
+.cq-card img { width: 100%; height: 230px; object-fit: cover; }
+.cq-card div { padding: 24px; }
+.cq-card h3 { font-family: var(--serif); font-size: 26px; }
+.cq-card p { margin: 0; color: #607080; line-height: 1.7; }
+
+@media (max-width: 720px) {
+  .cq-hero { min-height: 70vh; }
+  .cq-main { padding: 64px 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cq-card { opacity: 1; transform: none; transition: none; }
+}

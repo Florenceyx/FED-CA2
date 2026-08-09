@@ -105,8 +105,10 @@
   .card .desc{padding:13px 14px 15px;font-size:12.5px;line-height:1.55;color:var(--ink-soft);flex:1;display:flex;flex-direction:column}
   .card .dtext{margin:0}
   .card .more{margin-top:8px;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--gold);
-    opacity:0;transform:translateY(4px);transition:opacity .28s ease,transform .28s ease}
-  .ctrack:not(.dragging) .card:hover .more{opacity:1;transform:none}
+    text-decoration:none;opacity:0;transform:translateY(4px);transition:opacity .28s ease,transform .28s ease}
+  .ctrack:not(.dragging) .card:hover .more,
+  .card .more:focus-visible{opacity:1;transform:none}
+  .card .more:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
   .cnav{position:absolute;top:calc(50% - 22px);z-index:6;width:44px;height:44px;border-radius:50%;border:none;
     background:#fffffff2;box-shadow:0 10px 24px -10px rgba(20,30,45,.55);color:var(--navy);font-size:24px;line-height:1;
     cursor:pointer;display:grid;place-items:center;opacity:0;transition:opacity .25s,transform .18s;font-family:var(--serif)}

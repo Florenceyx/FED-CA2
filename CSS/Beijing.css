@@ -67,7 +67,7 @@ section{position:relative;}
   min-height:100vh;
   background:
     linear-gradient(100deg, rgba(15,8,6,0.82) 0%, rgba(15,8,6,0.45) 42%, rgba(15,8,6,0.15) 62%, rgba(30,15,10,0.55) 100%),
-    url('../images/hero.jpg') center 62%/cover no-repeat;
+    url('../images/beijing images/hero.jpg') center 62%/cover no-repeat;
 }
 .sky-tint{
   position:absolute; inset:0; mix-blend-mode:overlay; opacity:0.65; pointer-events:none; z-index:1;
@@ -340,21 +340,6 @@ section{position:relative;}
   .itin-card-media{ height:150px; overflow:hidden; }
   .itin-card:hover .itin-card-media img{ transform:scale(1.1); }
   .itin-card-label{ text-align:center; font-size:10.5px; letter-spacing:0.04em; color:var(--parchment); padding:8px 5px; }
-
-  /* ---------- FOOTER (flex layout now via Bootstrap) ---------- */
-  footer{
-    background:var(--maroon-deep); color:var(--parchment-dark); padding:34px 44px;
-  }
-  footer .fbrand .seal{ width:30px;height:30px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:13px;}
-  footer .fbrand .line1{ font-family:'Cinzel',serif; letter-spacing:0.14em; font-size:13px; color:var(--gold-bright);}
-  footer .fbrand .line2{ font-size:11px; color:var(--parchment-dark); margin-top:2px; }
-  footer nav a{ font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.1em; opacity:0.85; }
-  footer nav a:hover{ opacity:1; color:var(--gold-bright); }
-  footer .socials a{
-    width:32px;height:32px;border-radius:50%;border:1px solid var(--gold); display:flex;
-    align-items:center;justify-content:center; color:var(--gold-bright); transition:background 0.25s ease;
-  }
-  footer .socials a:hover{ background:rgba(201,161,90,0.15); }
 
   @media (max-width:760px){
     .book{ aspect-ratio:auto; flex-direction:column; }

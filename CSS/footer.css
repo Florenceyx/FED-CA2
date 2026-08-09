@@ -2,13 +2,25 @@
    FOOTER LAYOUT
 ========================= */
 
+#footer-placeholder {
+  position: relative;
+  z-index: 9;
+  display: block;
+  clear: both;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .site-footer {
   position: relative;
   z-index: 9;
 
   min-height: 110px;
-  margin-top: 48px;
+  width: 100%;
+  margin: 0;
   padding: 12px 28px;
+  box-sizing: border-box;
 
   display: grid;
   grid-template-columns:
@@ -323,7 +335,7 @@ column-gap: 10px;
     gap: 20px;
 
     padding: 28px 22px;
-    margin-top: 36px;
+    margin-top: 0;
   }
 
   .site-footer .fbrand,

@@ -39,7 +39,7 @@ a{text-decoration:none;}
   overflow:hidden;
   background:
     linear-gradient(180deg, rgba(20,25,15,.55) 0%, rgba(20,25,15,.15) 35%, rgba(20,25,15,.35) 100%),
-    url('../images/hero.jpg') center/cover no-repeat;
+    url('../images/zhang jia jie images/hero.jpg') center/cover no-repeat;
 }
 .hero-bg{
   position:absolute; inset:0;

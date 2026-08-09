@@ -140,7 +140,7 @@
   .journeys{position:relative;width:256px;margin-top:20px;background:#f6f2ecf2;backdrop-filter:blur(5px);
     border:1px solid #e0d8c6;border-radius:14px;padding:18px 20px;pointer-events:auto;box-shadow:0 26px 54px -30px rgba(20,30,45,.55)}
   .journeys h4{font-size:11px;letter-spacing:.2em;color:var(--ink-soft);font-weight:600;margin-bottom:12px}
-  .jrow{display:flex;align-items:center;gap:13px;padding:9px 4px;border-radius:8px;cursor:pointer;transition:background .2s}
+  .jrow{display:flex;align-items:center;gap:13px;padding:9px 4px;border-radius:8px;color:inherit;text-decoration:none;cursor:pointer;transition:background .2s}
   .jrow:hover,
   .jrow:focus-visible{background:#e9e0cd;outline:none}
   .jrow .ji{width:26px;height:26px;flex:none}

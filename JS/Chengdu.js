@@ -198,10 +198,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const mask = document.getElementById('bianlianMask');
   const caption = document.getElementById('maskCaption');
   const masks = [
-    { label: 'The brave mask — red, for heroic roles', img: '../images/ChengDu/Sichuan Bianlian_red.jpeg', tint: 'var(--gold)' },
-    { label: 'The joyful mask — yellow, worn for celebration scenes.', img: '../images/ChengDu/Sichuan Bianlian_yellow.jpeg', tint: 'var(--red)' },
-    { label: 'The fierce mask — bold black, for warrior roles.', img: '../images/ChengDu/Sichuan Bianlian_black.jpeg', tint: '#241610' },
-    { label: 'The wise mask — deep blue, for scholar roles.', img: '../images/ChengDu/Sichuan Bianlian_blue.jpeg', tint: '#4A5D3A' },
+    { label: 'The brave mask — red, for heroic roles', img: '../images/Chengdu/Sichuan Bianlian_red.jpeg', tint: 'var(--gold)' },
+    { label: 'The joyful mask — yellow, worn for celebration scenes.', img: '../images/Chengdu/Sichuan Bianlian_yellow.jpeg', tint: 'var(--red)' },
+    { label: 'The fierce mask — bold black, for warrior roles.', img: '../images/Chengdu/Sichuan Bianlian_black.jpeg', tint: '#241610' },
+    { label: 'The wise mask — deep blue, for scholar roles.', img: '../images/Chengdu/Sichuan Bianlian_blue.jpeg', tint: '#4A5D3A' },
   ];
   let maskIndex = 0;
 
