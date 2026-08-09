@@ -39,6 +39,51 @@ a{text-decoration:none;}
     radial-gradient(circle at 85% 80%, rgba(163,34,31,.05), transparent 45%);
 }
 
+/* ============ PAGE DOTS (right-side jump nav) ============ */
+.yn-page-dots{
+  position:fixed;
+  top:50%;
+  right:24px;
+  transform:translateY(-50%);
+  z-index:50;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:14px;
+}
+.yn-page-dot{
+  position:relative;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  border:1px solid var(--indigo);
+  background:transparent;
+  padding:0;
+  cursor:pointer;
+  transition:background .3s ease, transform .3s ease;
+}
+.yn-page-dot:hover{ transform:scale(1.3); }
+.yn-page-dot.active{ background:var(--indigo); transform:scale(1.3); }
+.yn-page-dot span{
+  position:absolute;
+  right:20px;
+  top:50%;
+  transform:translateY(-50%);
+  white-space:nowrap;
+  font-size:11px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:var(--indigo);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s ease;
+}
+.yn-page-dot:hover span{ opacity:1; }
+
+@media (max-width:760px){
+  .yn-page-dots{ display:none; } /* hide on mobile — not enough side space */
+}
+
  /* =========================================================
    HERO
    ========================================================= */
