@@ -156,22 +156,11 @@ if (sealCircle && closingSection) {
   sealObserver.observe(closingSection);
 }
 
-/* ============ PARALLAX HERO PHOTO ============ */
-const heroPhoto = document.getElementById('heroPhoto');
-const heroEl = document.getElementById('hero');
-function updateParallax() {
-  if (!heroPhoto || !heroEl) return;
-  const rect = heroEl.getBoundingClientRect();
-  if (rect.bottom < 0 || rect.top > window.innerHeight) return;
-  const scrollFrac = -rect.top;
-  heroPhoto.style.transform = `translateY(${scrollFrac * 0.25}px) scale(1.1)`;
-}
-window.addEventListener('scroll', updateParallax, { passive: true });
-updateParallax();
+
 
 /* ============ NEEDLE-AND-THREAD CURSOR TRAIL ============ */
 /* A small pool of dots trailing the pointer, only inside hero + quilt sections */
-const trailZones = ['hero', 'quilt'].map(id => document.getElementById(id));
+const trailZones = ['quilt'].map(id => document.getElementById(id));
 const trailContainer = document.getElementById('threadTrail');
 const POOL_SIZE = 10;
 const pool = [];
