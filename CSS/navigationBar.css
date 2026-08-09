@@ -8,7 +8,7 @@
   left: 0;
   right: 0;
   z-index: 30;
-  height: 115px;
+  height: 92px;
   display: block;
   padding: 0;
   background: transparent;
@@ -22,7 +22,7 @@
 
 .main-navbar .brand {
   position: absolute;
-  top: 30px;
+  top: 14px;
   left: 38px;
   display: flex;
   align-items: flex-start;
@@ -76,7 +76,7 @@
 
 .main-navbar .navlinks {
   position: absolute;
-  top: 38px;
+  top: 24px;
   left: 57%;
   transform: translateX(-50%);
 
@@ -141,7 +141,7 @@
 .main-navbar .navtoggle {
   display: none;
   position: absolute;
-  top: 30px;
+  top: 18px;
   right: 22px;
 
   border: 0;
