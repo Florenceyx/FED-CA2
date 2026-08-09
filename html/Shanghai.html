@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>China Unfolded — Shanghai: Past Meets Future</title>
+
+<!-- Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital@1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="shanghai.css">
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="main-navbar">
+  <div class="brand">
+    <div class="logo">
+      <b>CHINA<br>UNFOLDED</b>
+      <span>One Country. Thousands of Stories.</span>
+    </div>
+
+    <div class="seal">
+      探游<br>中国
+    </div>
+  </div>
+
+  <div class="navlinks">
+   
+    <a href="./index.html" data-page="index.html">HOME</a>
+    <div class="nav-dropdown">
+      <a href="#" class="destination-link" aria-haspopup="true">DESTINATION</a>
+      <div class="destination-menu">
+        <a href="#">Beijing</a>
+        <a href="#">Xi'an</a>
+        <a href="./Shanghai.html">Shanghai</a>
+        <a href="./Shenzhen.html">Shenzhen</a>
+        <a href="./Chongqing.html">Chongqing</a>
+        <a href="#">Zhangjiajie</a>
+        <a href="#">Guilin</a>
+        <a href="#">Chengdu</a>
+        <a href="#">Yunnan</a>
+      </div>
+    </div>
+    <a href="./PlanYourJourney.html" data-page="PlanYourJourney.html">PLANNER</a>
+    <a href="./seasonalChina.html" data-page="seasonalChina.html">SEASONAL CHINA</a>
+  </div>
+
+  <button class="navtoggle" type="button" aria-label="Open navigation" aria-expanded="false">
+    &#9776;
+  </button>
+
+  </nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="breadcrumb-row">Modern China <span class="sep">›</span> <span class="current">Shanghai</span></div>
+
+  <div class="then-now-toggle">
+    <button id="btnThen" class="active">THEN</button>
+    <span class="arrow-icon">⟷</span>
+    <button id="btnNow">NOW</button>
+  </div>
+
+  <div class="hero-slider" id="heroSlider">
+    <div class="slider-image slider-before">
+      <img src="../Shannghai pictures/Old Shanghai.jpg" alt="Old Shanghai">
+    </div>
+    <div class="slider-image slider-after" id="afterImage">
+      <img src="../Shannghai pictures/New Shanghai.jpg" alt="New Shanghai">
+    </div>
+    <div class="slider-handle" id="sliderHandle">
+      <div class="handle-line" id="handleLine"></div>
+      <div class="handle-circle" id="handleCircle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-copy">
+    <div class="eyebrow">Explore</div>
+    <h1>Shanghai</h1>
+    <div class="subtitle">Past meets future</div>
+    <div class="subtitle-rule"></div>
+    <p>A city shaped by heritage and driven by innovation, Shanghai stands between tradition and tomorrow.</p>
+    <a href="#timeline" class="btn-journey">Begin Shanghai Journey <span>→</span></a>
+  </div>
+
+  <div class="hero-hint">
+    <div class="drag-icon">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
+    </div>
+    <span>Drag the slider to see Shanghai's transformation from past to present</span>
+  </div>
+
+  <div class="scroll-cue">Scroll to explore<div class="chevron">⌄</div></div>
+</header>
+
+<!-- ============ CONNECTOR ============ -->
+<div class="connector-zone" id="connectorZone">
+  <div class="connector-line" id="connectorLine"></div>
+</div>
+
+<!-- ============ TIMELINE ============ -->
+<section class="timeline-section" id="timeline">
+  <div class="timeline-rail">
+    <div class="timeline-rail-fill" id="railFill"></div>
+  </div>
+
+  <div class="timeline-item" data-index="0">
+    <div class="timeline-node"></div>
+    <div class="timeline-text">
+      <div class="timeline-num">01</div>
+      <h3 class="timeline-title">The Origins</h3>
+      <div class="timeline-subtitle">A City Is Born</div>
+      <p class="timeline-desc">From a small fishing village to a bustling port, Shanghai's story began centuries ago, shaped by the meeting of cultures and opportunity.</p>
+    </div>
+    <div class="timeline-media">
+      <img src="../Shannghai pictures/Old Shanghai.jpg" alt="The Origins — early Shanghai waterfront">
+    </div>
+  </div>
+
+  <div class="timeline-item" data-index="1">
+    <div class="timeline-node"></div>
+    <div class="timeline-text">
+      <div class="timeline-num">02</div>
+      <h3 class="timeline-title">Yu Garden</h3>
+      <div class="timeline-subtitle">Timeless Beauty</div>
+      <p class="timeline-desc">A masterpiece of classical Chinese gardens, where art, nature, and history come together.</p>
+    </div>
+    <div class="timeline-media">
+      <img src="../Shannghai pictures/Yu Garden.jpg" alt="Yu Garden">
+    </div>
+  </div>
+
+  <div class="timeline-item" data-index="2">
+    <div class="timeline-node"></div>
+    <div class="timeline-text">
+      <div class="timeline-num">03</div>
+      <h3 class="timeline-title">Xiaolongbao</h3>
+      <div class="timeline-subtitle">A Taste Of Tradition</div>
+      <p class="timeline-desc">Delicate, savory, and made with centuries of craft — Shanghai's most iconic bite.</p>
+    </div>
+    <div class="timeline-media">
+      <img src="../Shannghai pictures/Xiao Long Bao.jpg" alt="Xiaolongbao">
+    </div>
+  </div>
+
+  <div class="timeline-item" data-index="3">
+    <div class="timeline-node"></div>
+    <div class="timeline-text">
+      <div class="timeline-num">04</div>
+      <h3 class="timeline-title">The Bund</h3>
+      <div class="timeline-subtitle">Legacy By The River</div>
+      <p class="timeline-desc">Where colonial history meets a modern soul — Shanghai's iconic waterfront.</p>
+    </div>
+    <div class="timeline-media">
+      <img src="../Shannghai pictures/The Bund.jpg" alt="The Bund">
+    </div>
+  </div>
+
+  <div class="timeline-item" data-index="4">
+    <div class="timeline-node"></div>
+    <div class="timeline-text">
+      <div class="timeline-num">05</div>
+      <h3 class="timeline-title">Pudong Skyline</h3>
+      <div class="timeline-subtitle">A Vision For Tomorrow</div>
+      <p class="timeline-desc">A symbol of innovation and ambition, Pudong shapes the future of one of the world's greatest cities.</p>
+    </div>
+    <div class="timeline-media">
+      <img src="../Shannghai pictures/New Shanghai.jpg" alt="Pudong Skyline">
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+
+  <!-- Left: Logo -->
+  <div class="fbrand">
+    <div class="footer-logo">
+      CHINA<br>UNFOLDED
+    </div>
+
+    <div class="fseal">
+      探游<br>中国
+    </div>
+  </div>
+
+  <!-- Left landscape -->
+  <div class="footer-pattern footer-pattern-left">
+    <img
+      src="../images/image/footer-pattern.png"
+      alt=""
+      aria-hidden="true"
+    >
+  </div>
+
+  <!-- Middle content -->
+  <div class="ftag">
+    <b>EXPLORE. DISCOVER. UNDERSTAND.</b>
+    <p>Every journey reveals a different side of China.</p>
+  </div>
+
+  <!-- Right landscape -->
+  <div class="footer-pattern footer-pattern-right">
+    <img
+      src="../images/image/footer-pattern.png"
+      alt=""
+      aria-hidden="true"
+    >
+  </div>
+
+  <!-- Right icons -->
+  <div class="fsocial">
+
+    <!-- Feedback -->
+    <a
+      href="./feedback.html"
+      id="feedbackFormLink"
+      aria-label="Give website feedback"
+      data-tooltip="Help us improve — share your feedback!"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6 3.5h9.5L19 7v13.5H6z"></path>
+        <path d="M15.5 3.5V7H19"></path>
+        <path d="M9 11h7M9 14.5h7M9 18h4"></path>
+      </svg>
+    </a>
+
+    <!-- Instagram -->
+    <a
+      href="#"
+      id="shareInstagram"
+      aria-label="Share on Instagram"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+        <circle cx="12" cy="12" r="4"></circle>
+        <circle class="icon-dot" cx="17.5" cy="6.5" r="1"></circle>
+      </svg>
+    </a>
+
+    <!-- WhatsApp -->
+    <a
+      href="#"
+      id="shareWhatsApp"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Share on WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20 11.7a8 8 0 0 1-11.8 7L4 20l1.3-4.1A8 8 0 1 1 20 11.7z"></path>
+        <path d="M9 8.2c.3-.4.6-.4.9-.1l1 1.4c.2.3.2.6 0 .9l-.6.7c.8 1.6 1.9 2.7 3.5 3.5l.7-.7c.3-.3.6-.3.9-.1l1.3.9c.4.3.4.6.2 1-.5.8-1.3 1.2-2.2 1.1-3.9-.5-7-3.6-7.5-7.5-.1-.4.2-.8.8-1.1z"></path>
+      </svg>
+    </a>
+
+  </div>
+
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="shanghai.js"></script>
+</body>
+</html>
