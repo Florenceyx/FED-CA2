@@ -22,8 +22,10 @@
 column-gap: 10px;
   overflow: visible;
 
-  color: #cdd6e0;
-  background: #0b2038;
+  color: #17324d;
+  background: rgba(244, 239, 228, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid rgba(198, 162, 75, 0.35);
 }
 
@@ -41,7 +43,7 @@ column-gap: 10px;
 }
 
 .site-footer .footer-logo {
-  color: #f4efe4;
+  color: #17324d;
   font-family: "Playfair Display", serif;
   font-size: 22px;
   font-weight: 600;
@@ -101,7 +103,7 @@ column-gap: 10px;
   display: block;
 
   object-fit: contain;
-  mix-blend-mode: screen;
+  mix-blend-mode: multiply;
 }
 
 
@@ -129,7 +131,7 @@ column-gap: 10px;
 .site-footer .ftag b {
   display: block;
 
-  color: #d9c184;
+  color: #9b7221;
   font-family: "Playfair Display", serif;
   font-size: 17px;
   font-weight: 600;
@@ -140,7 +142,7 @@ column-gap: 10px;
 .site-footer .ftag p {
   margin: 5px 0 0;
 
-  color: #aebac7;
+  color: #4f6274;
   font-size: 12.5px;
   line-height: 1.4;
 }
@@ -172,8 +174,8 @@ column-gap: 10px;
   display: grid;
   place-items: center;
 
-  color: #d9c184;
-  border: 1.5px solid rgba(217, 193, 132, 0.72);
+  color: #9b7221;
+  border: 1.5px solid rgba(155, 114, 33, 0.62);
   border-radius: 50%;
   text-decoration: none;
 
@@ -206,8 +208,8 @@ column-gap: 10px;
 
 .site-footer .fsocial a:hover,
 .site-footer .fsocial a:focus-visible {
-  color: #ffe08c;
-  background: rgba(198, 162, 75, 0.16);
+  color: #17324d;
+  background: rgba(198, 162, 75, 0.18);
   border-color: #c6a24b;
 
   box-shadow: 0 0 18px rgba(198, 162, 75, 0.28);
