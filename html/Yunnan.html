@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yunnan â€” A Mosaic of Cultures</title>
+<title>Yunnan — A Mosaic of Cultures</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../CSS/Yunnan.css">
-
-
-<link rel="stylesheet" href="../CSS/navigationBar.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="../CSS/nav.css">
 <link rel="stylesheet" href="../CSS/footer.css">
+<link rel="stylesheet" href="../CSS/Yunnan.css">
 </head>
 <body>
 
@@ -22,43 +22,21 @@
 
 <div class="thread-trail" id="threadTrail" aria-hidden="true"></div>
 
-<div id="navigation-placeholder"></div>
+<div id="nav-placeholder"></div>
 
 <!-- ============ HERO ============ -->
-<section class="hero" id="hero">
-
-<!-- BACKGROUND IMAGE HOLDER: drop your photo path in below. It's cropped/positioned toward the RIGHT so the left text stays readable. -->
-<div class="hero-photo" id="heroPhoto" style="background-image:url('../images/Yunnan/cultural.jpeg');"></div>
-<div class="hero-scrim" aria-hidden="true"></div>
-
-  <svg class="hero-accents" viewBox="0 0 1400 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-    <circle cx="1180" cy="120" r="64" fill="#C08A34" opacity="0.28"/>
-    <circle cx="1180" cy="120" r="40" fill="#C08A34" opacity="0.4"/>
-  </svg>
-
-  <div class="hero-frame" aria-hidden="true"></div>
-
-  <div class="stamp" id="stamp" aria-hidden="true">
-    <svg viewBox="0 0 100 100">
-      <circle cx="50" cy="50" r="46" fill="none" stroke="var(--thread)" stroke-width="3"/>
-      <circle cx="50" cy="50" r="38" fill="none" stroke="var(--thread)" stroke-width="1"/>
-      <text x="50" y="45" text-anchor="middle" class="stamp-zh">äº‘å—</text>
-      <text x="50" y="68" text-anchor="middle" class="stamp-en">YUNNAN</text>
-    </svg>
+<header id="top" class="yn-hero d-flex align-items-center">
+  <div class="yn-hero-texture"></div>
+  <div class="container position-relative">
+    <p class="yn-eyebrow reveal">云南 · CULTURAL ROUTE</p>
+    <h1 class="yn-hero-title reveal">Yunnan<br></h1>
+    <p class="yn-hero-sub reveal">One province, no single face. 
+      Twenty-five recognised peoples, a dozen-plus language families, 
+      and traditions stitched together across mountain, lake and tea-terrace.</p>
+    <a href="#quilt" class="btn yn-btn-primary reveal">Discover Yunnan <i class="bi bi-arrow-down"></i></a>
   </div>
+</header>
 
-  <div class="hero-content">
-    <span class="eyebrow reveal">Culture &amp; Diversity</span>
-    <h1 class="reveal">Yunnan </h1>
-    <h1 class="reveal"> Mosaic <em>of Cultures</em></h1>
-    <p class="lede reveal">One province, no single face. Twenty-five recognised peoples, a dozen-plus language families, and traditions stitched together across mountain, lake and tea-terrace â€” each community its own square of cloth in the same quilt.</p>
-    <a href="#quilt" class="hero-cta reveal"><span>Explore the Threads</span><span class="hero-cta-arrow">â†’</span></a>
-  </div>
-
-  <svg class="scallop scallop--bottom" viewBox="0 0 400 20" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0,0 Q10,20 20,0 Q30,20 40,0 Q50,20 60,0 Q70,20 80,0 Q90,20 100,0 Q110,20 120,0 Q130,20 140,0 Q150,20 160,0 Q170,20 180,0 Q190,20 200,0 Q210,20 220,0 Q230,20 240,0 Q250,20 260,0 Q270,20 280,0 Q290,20 300,0 Q310,20 320,0 Q330,20 340,0 Q350,20 360,0 Q370,20 380,0 Q390,20 400,0 V20 H0 Z" fill="transparent"/>
-  </svg>
-</section>
 
 <!-- ============ DIVERSITY ============ -->
 <section class="diversity" id="diversity">
@@ -80,10 +58,10 @@
 
   <div class="wrap">
     <div class="shead reveal">
-      <span class="eyebrow">Not One Culture â€” Many</span>
+      <span class="eyebrow">Not One Culture — Many</span>
       <h2>A Province Built</h2>
       <h2>From Its Peoples</h2>
-      <p>Yunnan borders Myanmar, Laos and Vietnam, and history has folded dozens of communities into its valleys. No single city or costume can stand for the whole â€” diversity is the actual subject.</p>
+      <p>Yunnan borders Myanmar, Laos and Vietnam, and history has folded dozens of communities into its valleys. No single city or costume can stand for the whole — diversity is the actual subject.</p>
     </div>
 
     <div class="seam-wrap reveal">
@@ -111,18 +89,18 @@
       <p>Twelve of Yunnan's peoples, each carrying its own craft or calendar. Hover a patch to read it.</p>
     </div>
     <div class="thread-grid" aria-label="Ethnic groups of Yunnan">
-      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-dali)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/bai.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Bai <em>ç™½æ—</em></span><span class="tc-tag">Batik dye &amp; marble inlay</span></div>
-      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-lijiang)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/naxi.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Naxi <em>çº³è¥¿æ—</em></span><span class="tc-tag">Dongba pictograph script</span></div>
-      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-shangrila)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/tibetan.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Tibetan <em>è—æ—</em></span><span class="tc-tag">Prayer flags, butter tea</span></div>
-      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-ethnic)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/yi.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Yi <em>å½æ—</em></span><span class="tc-tag">Torch Festival, silverwork</span></div>
-      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-tea)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/dai.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Dai <em>å‚£æ—</em></span><span class="tc-tag">Water-Splashing New Year</span></div>
-      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-fest)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/hani.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Hani <em>å“ˆå°¼æ—</em></span><span class="tc-tag">Terraced rice, sacred forests</span></div>
-      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-ethnic)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/wa.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Wa <em>ä½¤æ—</em></span><span class="tc-tag">Wooden drum ceremonies</span></div>
-      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-fest)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/lisu.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Lisu <em>å‚ˆåƒ³æ—</em></span><span class="tc-tag">Knife-Pole Festival</span></div>
-      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-dali)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/jingpo.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Jingpo <em>æ™¯é¢‡æ—</em></span><span class="tc-tag">Munao Zongge dance</span></div>
-      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-lijiang)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/miao.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Miao <em>è‹—æ—</em></span><span class="tc-tag">Silver headdress, batik</span></div>
-      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-tea)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/zhuang.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Zhuang <em>å£®æ—</em></span><span class="tc-tag">Bronze drum heritage</span></div>
-      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-shangrila)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/lahu.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Lahu <em>æ‹‰ç¥œæ—</em></span><span class="tc-tag">Gourd-sheng music</span></div>
+      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-dali)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/bai.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Bai <em>白族</em></span><span class="tc-tag">Batik dye &amp; marble inlay</span></div>
+      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-lijiang)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/naxi.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Naxi <em>纳西族</em></span><span class="tc-tag">Dongba pictograph script</span></div>
+      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-shangrila)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/tibetan.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Tibetan <em>藏族</em></span><span class="tc-tag">Prayer flags, butter tea</span></div>
+      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-ethnic)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/yi.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Yi <em>彝族</em></span><span class="tc-tag">Torch Festival, silverwork</span></div>
+      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-tea)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/dai.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Dai <em>傣族</em></span><span class="tc-tag">Water-Splashing New Year</span></div>
+      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-fest)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/hani.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Hani <em>哈尼族</em></span><span class="tc-tag">Terraced rice, sacred forests</span></div>
+      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-ethnic)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/wa.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Wa <em>佤族</em></span><span class="tc-tag">Wooden drum ceremonies</span></div>
+      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-fest)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/lisu.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Lisu <em>傈僳族</em></span><span class="tc-tag">Knife-Pole Festival</span></div>
+      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-dali)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/jingpo.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Jingpo <em>景颇族</em></span><span class="tc-tag">Munao Zongge dance</span></div>
+      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-lijiang)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/miao.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Miao <em>苗族</em></span><span class="tc-tag">Silver headdress, batik</span></div>
+      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-tea)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/zhuang.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Zhuang <em>壮族</em></span><span class="tc-tag">Bronze drum heritage</span></div>
+      <div class="thread-card reveal"><svg class="tc-motif" viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="url(#p-shangrila)"/></svg><div class="tc-photo" style="background-image:url('../images/Yunnan/lahu.jpeg')"></div><div class="tc-shade"></div><span class="tc-name">Lahu <em>拉祜族</em></span><span class="tc-tag">Gourd-sheng music</span></div>
     </div>
 
 
@@ -144,7 +122,7 @@
     <div class="shead reveal">
       <span class="eyebrow">Touch a Patch</span>
       <h2>Six Threads Through Yunnan</h2>
-      <p>Each patch unfolds like cloth to reveal one thread of the whole â€” a place, a people, a practice.</p>
+      <p>Each patch unfolds like cloth to reveal one thread of the whole — a place, a people, a practice.</p>
     </div>
 
     <div class="quilt-frame reveal">
@@ -220,13 +198,13 @@
     <path d="M70,20 L78,60 L70,120 L62,60 Z" fill="none" stroke="#e0a97e" stroke-width="1" opacity="0.5"/>
   </svg>
   <span class="eyebrow">One Cloth, Many Threads</span>
-  <h2>Yunnan isn't a place you visit once â€” it's <em>a pattern</em> you keep noticing more of.</h2>
+  <h2>Yunnan isn't a place you visit once — it's <em>a pattern</em> you keep noticing more of.</h2>
   <p>Every valley folds in a different people, dialect, and dye. That's the point of the mosaic: no single patch was ever meant to stand alone.</p>
   <div class="thread-rule"></div>
 </section>
 
-
 <div id="footer-placeholder"></div>
+
 
 <div class="veil" id="veil"></div>
 <div class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="panelTitle">
@@ -234,7 +212,7 @@
   <div class="panel-inner">
     <div class="panel-hero" id="panelHero">
       <svg id="panelMotif" viewBox="0 0 400 230" preserveAspectRatio="xMidYMid slice"></svg>
-      <button class="close-btn" id="closeBtn" aria-label="Close">âœ•</button>
+      <button class="close-btn" id="closeBtn" aria-label="Close">✕</button>
       <div class="htitle">
         <span class="en" id="panelTitle"></span>
         <span class="zh" id="panelZh"></span>
@@ -248,10 +226,21 @@
   </div>
 </div>
 
+<script>
+  fetch('./navigationBar.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('nav-placeholder').innerHTML = html;
+    });
+
+  fetch('./footer.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+    });
+</script>
+<script src="../JS/navigationBar.js"></script>
+<script src="../JS/footer.js"></script>
 <script src="../JS/Yunnan.js"></script>
-  <script src="../JS/navigationBar.js"></script>
-  <script src="../JS/footer.js"></script>
 </body>
 </html>
-
-
