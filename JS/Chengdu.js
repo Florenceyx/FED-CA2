@@ -217,6 +217,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* =====================================================
+     MOBILE NAV — hamburger toggle
+     ===================================================== */
+  const navToggle = document.querySelector('.navtoggle');
+  const navLinks = document.querySelector('.navlinks');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('navlinks-open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('navlinks-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  /* =====================================================
      Smooth scroll for in-page nav links
      ===================================================== */
   document.querySelectorAll('a[href^="#"]').forEach(link => {
