@@ -23,16 +23,30 @@
   --sc:    'Noto Serif SC', serif;
 }
 
-/* ===== nav color override, this page and Yunnan only ===== */
-.main-navbar .navlinks a{
-  color: var(--parchmentpaper) !important;
+/* ==== nav color override, this page only ==== */
+
+/* Top-level nav links (HOME, DESTINATION, PLANNER, SEASONAL CHINA) — white */
+.main-navbar > .navlinks > a,
+.main-navbar > .navlinks > .nav-dropdown > a.destination-link{
+  color: var(--parchment) !important;
 }
-.main-navbar .navlinks a:hover{
-  color: var(--accent-gold-softold-soft) !important;
+.main-navbar > .navlinks > a:hover,
+.main-navbar > .navlinks > .nav-dropdown > a.destination-link:hover{
+  color: var(--accent-gold-soft) !important;
 }
+
+/* Dropdown menu links (Beijing, Xi'an, etc.) — keep dark, they sit on a light box */
+.main-navbar .destination-menu a{
+  color: var(--ink) !important;
+}
+
+/* Logo */
 .main-navbar .brand b{
   color: var(--parchment) !important;
-} 
+}
+.main-navbar .brand .logo span{
+  color: var(--parchmentpaper) !important;
+}
 
 *{box-sizing:border-box;}
 
