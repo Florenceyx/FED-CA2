@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Xi'an - Unearth History</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../CSS/navigationBar.css">
 <link rel="stylesheet" href="../CSS/footer.css">
 <link rel="stylesheet" href="../CSS/Xi'an.css">
@@ -172,16 +173,56 @@
       <div class="stop" data-i="6"><div class="dot"></div><div class="time">20:30</div><div class="label">Bell Tower & Drum Tower Night View</div></div>
     </div>
     <div class="itin-cards" id="itinCards">
-      <div class="itin-card i1" data-i="0"><div class="layer"></div><div class="glyph"><img src="../images/xi an images/terracotta army.jpg" alt="Terracotta Army"></div></div>
-      <div class="itin-card i2" data-i="1"><div class="layer"></div><div class="glyph"><img src="../images/xi an images/city wall bike riders.jpg" alt="Xi'an City Wall"></div></div>
-      <div class="itin-card i3" data-i="2"><div class="layer"></div><div class="glyph"><img src="../images/xi an images/Rou Jia Mo.jpg" alt="Roujiamo"></div></div>
-      <div class="itin-card i4" data-i="3"><div class="layer"></div><div class="glyph"><img src="../images/xi an images/Giant Wild Goose Pagoda.jpg" alt="Giant Wild Goose Pagoda"></div></div>
-      <div class="itin-card i5" data-i="4"><div class="layer"></div><div class="glyph"><img src="../images/xi an images/muslim quarter.jpg" alt="Muslim Quarter"></div></div>
-      <div class="itin-card i6" data-i="5"><div class="layer"></div><div class="glyph"><img src="../images/xi an images/night market.jpg" alt="Night Market"></div></div>
-      <div class="itin-card i7" data-i="6"><div class="layer"></div><div class="glyph"><img src="../images/xi an images/drum tower.jpg" alt="Drum Tower"></div></div>
+      <div class="itin-card i1" data-i="0" data-bs-toggle="modal" data-bs-target="#itinModal"
+        data-title="Terracotta Army Museum" data-time="08:00"
+        data-desc="Begin the day among thousands of life-sized clay soldiers, buried for over two thousand years to guard the tomb of China's first emperor. Each figure has a unique face — no two are exactly alike.">
+        <div class="layer"></div><div class="glyph"><img src="../images/xi an images/terracotta army.jpg" alt="Terracotta Army"></div>
+      </div>
+      <div class="itin-card i2" data-i="1" data-bs-toggle="modal" data-bs-target="#itinModal"
+        data-title="Ancient City Wall" data-time="10:30"
+        data-desc="Ride a bike along the ancient city wall, offering stunning views of the historic city and its surroundings.">
+        <div class="layer"></div><div class="glyph"><img src="../images/xi an images/city wall bike riders.jpg" alt="Xi'an City Wall"></div>
+      </div>
+      <div class="itin-card i3" data-i="2" data-bs-toggle="modal" data-bs-target="#itinModal"
+        data-title="Roujiamo" data-time="12:00"
+        data-desc="Taste the famous Xi'an snack, Roujiamo, often called the 'Chinese hamburger'.">
+        <div class="layer"></div><div class="glyph"><img src="../images/xi an images/Rou Jia Mo.jpg" alt="Roujiamo"></div>
+      </div>
+      <div class="itin-card i4" data-i="3" data-bs-toggle="modal" data-bs-target="#itinModal"
+        data-title="Giant Wild Goose Pagoda" data-time="14:00"
+        data-desc="Explore the historic Giant Wild Goose Pagoda, a symbol of Xi'an and a masterpiece of Tang Dynasty architecture.">
+        <div class="layer"></div><div class="glyph"><img src="../images/xi an images/Giant Wild Goose Pagoda.jpg" alt="Giant Wild Goose Pagoda"></div>
+      </div>
+      <div class="itin-card i5" data-i="4" data-bs-toggle="modal" data-bs-target="#itinModal"
+        data-title="Muslim Quarter" data-time="16:00"
+        data-desc="Immerse yourself in the vibrant atmosphere of the Muslim Quarter, known for its delicious street food and rich cultural heritage.">
+        <div class="layer"></div><div class="glyph"><img src="../images/xi an images/muslim quarter.jpg" alt="Muslim Quarter"></div>
+      </div>
+      <div class="itin-card i6" data-i="5" data-bs-toggle="modal" data-bs-target="#itinModal"
+        data-title="Night Market" data-time="19:00"
+        data-desc="Experience the lively nightlife at the Night Market, where you can enjoy various snacks and cultural performances.">
+        <div class="layer"></div><div class="glyph"><img src="../images/xi an images/night market.jpg" alt="Night Market"></div>
+      </div>
+      <div class="itin-card i7" data-i="6" data-bs-toggle="modal" data-bs-target="#itinModal"
+        data-title="Drum Tower" data-time="20:30"
+        data-desc="Visit the iconic Drum Tower and Bell Tower, which offer panoramic views of the city and a glimpse into ancient Chinese architecture.">
+        <div class="layer"></div><div class="glyph"><img src="../images/xi an images/drum tower.jpg" alt="Drum Tower"></div>
+      </div>
     </div>
   </div>
 </section>
+<div class="modal fade" id="itinModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="background:var(--dig-black-2); color:var(--paper); border:1px solid var(--earth);">
+      <div class="modal-body p-4">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="position:absolute; top:16px; right:16px;"></button>
+        <div id="itinModalTime" style="color:var(--gold-bright); font-family:var(--serif); letter-spacing:2px; font-size:13px; margin-bottom:6px;"></div>
+        <h3 id="itinModalTitle" style="font-family:var(--serif); margin-bottom:14px;"></h3>
+        <p id="itinModalDesc" style="color:var(--sand); line-height:1.7; margin:0;"></p>
+      </div>
+    </div>
+  </div>
+</div>
 <footer class="site-footer">
   <div class="fbrand">
     <div class="footer-logo">
@@ -237,6 +278,7 @@
 <script src="../JS/xian.js"></script>
 <script src="../JS/navigationBar.js"></script>
 <script src="../JS/footer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 

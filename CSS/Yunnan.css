@@ -14,34 +14,32 @@
   --font-body:'Inter', sans-serif;
 }
 
-/* ===== Yunnan page: kill top gap, float nav over hero ===== */
-html, body{
-  margin: 0 !important;
-  padding: 0 !important;
-}
-header#top.yn-hero{
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-header#top.yn-hero .main-navbar{
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  margin: 0 !important;
-  background: transparent !important;
-}
 
-/* ===== nav color override, this page and Chengdu only ===== */
-.main-navbar .navlinks a{
+/* ==== nav color override, this page and Chengdu page only ==== */
+
+/* Top-level nav links (HOME, DESTINATION, PLANNER, SEASONAL CHINA) — white */
+.main-navbar > .navlinks > a,
+.main-navbar > .navlinks > .nav-dropdown > a.destination-link{
   color: var(--paper) !important;
 }
-.main-navbar .navlinks a:hover{
+.main-navbar > .navlinks > a:hover,
+.main-navbar > .navlinks > .nav-dropdown > a.destination-link:hover{
   color: var(--accent-gold-soft) !important;
 }
+
+/* Dropdown menu links (Beijing, Xi'an, etc.) — keep dark, they sit on a light box */
+.main-navbar .destination-menu a{
+  color: var(--ink) !important;
+}
+
+/* Logo */
 .main-navbar .brand b{
   color: var(--paper) !important;
 }
+.main-navbar .brand .logo span{
+  color: var(--paper) !important;
+}
+
 
 *{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
