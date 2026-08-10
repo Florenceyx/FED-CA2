@@ -272,6 +272,14 @@
   text-align: left;
   transform: none;
 }
+.main-navbar {
+  position: relative !important;
+  z-index: 1000 !important;
+}
+
+.main-navbar .destination-menu {
+  z-index: 2000 !important;
+}
 
 .main-navbar .destination-menu a::after {
   display: none;
