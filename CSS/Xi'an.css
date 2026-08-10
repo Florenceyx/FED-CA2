@@ -11,8 +11,10 @@
     --ink:#3a2a1c;
     --paper:#f1e6cf;
     --paper-2:#e6d7b8;
-    --serif: 'Cinzel', serif;
-    --body: 'Noto Serif', serif;
+    --serif: 'Playfair Display', serif;
+    --body: 'Inter', sans-serif;
+    --accent: 'Caveat', cursive;
+    --sc: 'Noto Serif SC', serif;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
