@@ -345,7 +345,7 @@ p{line-height:1.75;color:var(--text-cream-dim);}
 /* ================= RESPONSIVE ================= */
 
 @media(max-width:960px){
-  .nav-links{display:none;}
+  .navlinks{display:none;}
   .journey-grid{grid-template-columns:1fr;}
   .journey-visual{position:relative;height:64vh;top:0;margin-bottom:20px;}
   .story-block{min-height:auto;padding:36px 8px;}
