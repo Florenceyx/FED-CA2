@@ -58,6 +58,14 @@
   }
   window.addEventListener('scroll', updateItinerary);
   updateItinerary();
+  document.querySelectorAll('.itin-card').forEach(card => {
+  card.addEventListener('click', () => {
+    document.getElementById('itinModalTitle').textContent = card.dataset.title;
+    document.getElementById('itinModalTime').textContent = card.dataset.time;
+    document.getElementById('itinModalDesc').textContent = card.dataset.desc;
+    document.getElementById('itinModalImg').style.backgroundImage = `url('${card.dataset.img}')`;
+  });
+});
 
   // nav active link on scroll
   const navLinks = document.querySelectorAll('nav a');
