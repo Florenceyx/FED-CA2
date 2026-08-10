@@ -2,17 +2,17 @@
   --bg-black:#130b09;
   --bg-charcoal:#1c130f;
   --bg-panel:#20150f;
-  --accent-red:#faf8f8;
-  --accent-red-bright:#fefbfb;
+  --accent-red:#100101;
+  --accent-red-bright:#fdfdfd;
   --accent-gold:#d9a463;
-  --text-cream:#f5ece1;
+  --text-cream:#fbfaf8;
   --text-muted:#b7a696;
   --hairline:rgba(245,236,225,0.14);
   --font-display:'Playfair Display', serif;
   --font-hand:'Caveat', cursive;
   --font-body:'Inter', sans-serif;
   /* shared navbar/footer + button palette (group styles) */
-  --ink:#f5ece1;
+  --ink:#fcfcfc;
   --serif:'Playfair Display', serif;
   --sans:'Inter', sans-serif;
   --sc:'Noto Serif SC', serif;
