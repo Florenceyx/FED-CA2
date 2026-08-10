@@ -104,16 +104,16 @@ const SEASONS=[
    blurb:'Snowy landscapes, cozy cities and warm food. Ideal for fewer crowds and peaceful, unhurried journeys.'}
 ];
 const CITY_ORDER=['Beijing','Shanghai','Shenzhen','Chongqing','Guilin','Zhangjiajie',"Xi'an",'Yunnan','Chengdu'];
-const CITY_PAGES={
-  Beijing:'./Beijing.html',
-  Shanghai:'./Shanghai.html',
-  Shenzhen:'./Shenzhen.html',
-  Chongqing:'./Chongqing.html',
-  Guilin:'./Guilin.html',
-  Zhangjiajie:'./Zhangjiajie.html',
-  "Xi'an":"./Xi'an.html",
-  Yunnan:'./Yunnan.html',
-  Chengdu:'./Chengdu.html'
+const CITY_PAGES = {
+  Beijing: './Beijing.html',
+  Shanghai: './Shanghai.html',
+  Shenzhen: './Shenzhen.html',
+  Chongqing: './chongqing.html',
+  Guilin: './Guilin.html',
+  Zhangjiajie: './Zhangjiajie.html',
+  "Xi'an": "./Xi'an.html",
+  Yunnan: './Yunnan.html',
+  Chengdu: './Chengdu.html'
 };
 const CITY_META={
   Beijing:{land:'wall',seed:0.6}, Shanghai:{land:'skyline',seed:4.4}, Shenzhen:{land:'skyline',seed:3.3},
@@ -256,7 +256,13 @@ const bg =
         : s.id === 'winter'
           ? `../images/Season/Winter/${imageFile}`
           : buildScene(PAL[s.id], meta.land, meta.seed);
-    return `<div class="card">
+    return `<div
+  class="card"
+  data-href="${CITY_PAGES[city]}"
+  role="link"
+  tabindex="0"
+  aria-label="Explore ${city}"
+>
       <div class="photo"
      style="
        background-image:url('${bg}');
@@ -323,10 +329,53 @@ function initCarousel(wrap){
   const endDrag=()=>{if(dragging){dragging=false;track.classList.remove('dragging');}};
   track.addEventListener('pointerup',endDrag);
   track.addEventListener('pointercancel',endDrag);
-  track.addEventListener('click',e=>{
-    if (e.target.closest('a.more')) return;
-    if(moved>6){e.preventDefault();e.stopPropagation();}
-  },true);
+  track.addEventListener('click', event => {
+  // If the user dragged the carousel, do not open a city page.
+  if (moved > 6) {
+    event.preventDefault();
+    event.stopPropagation();
+    return;
+  }
+
+  // Pointer capture may move the click target to the track,
+  // so check both the event target and the element under the mouse.
+  const directCard = event.target.closest?.('.card');
+
+  const elementUnderPointer = document.elementFromPoint(
+    event.clientX,
+    event.clientY
+  );
+
+  const card =
+    directCard ||
+    elementUnderPointer?.closest('.card');
+
+  if (!card) return;
+
+  const destination = card.dataset.href;
+
+  if (!destination) return;
+
+  event.preventDefault();
+  event.stopPropagation();
+
+  window.location.assign(destination);
+}, true);
+track.addEventListener('keydown', event => {
+  const card = event.target.closest('.card');
+
+  if (!card) return;
+
+  if (event.key !== 'Enter' && event.key !== ' ') return;
+
+  event.preventDefault();
+
+  const destination = card.dataset.href;
+
+  if (destination) {
+    window.location.assign(destination);
+  }
+});
   wrap.addEventListener('wheel',e=>{
     const d=Math.abs(e.deltaX)>Math.abs(e.deltaY)?e.deltaX:(e.shiftKey?e.deltaY:0);
     if(!d) return;                 // vertical intent: let the page scroll
