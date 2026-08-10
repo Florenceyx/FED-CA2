@@ -27,27 +27,17 @@
   <button class="page-dot" data-target="travel-tips" aria-label="Travel Gently"><span aria-hidden="true">Travel</span></button>
 </nav>
 
-<header id="hero" class="hero">
-  <div class="hero-sky"></div>
-  
 
-  <div class="hero-content">
-    <p class="eyebrow">桂林 · NATURAL ROUTE</p>
-    <h1>Guilin</h1>
-    <p class="hero-desc">
-      Somewhere between Guilin and Yangshuo, a boat drifts through limestone
+<header id="top" class="cd-hero d-flex align-items-center">
+  <div class="cd-hero-texture"></div>
+  <div class="container position-relative">
+    <p class="cd-eyebrow" data-reveal>桂林 · NATURAL ROUTE</p>
+    <h1 class="cd-hero-title" data-reveal>Guilin<br></h1>
+    <p class="cd-hero-sub" data-reveal>Somewhere between Guilin and Yangshuo, a boat drifts through limestone
       peaks that have been painted, poeticised and photographed for a
-      thousand years â€” and still look unlike anywhere else on earth.
-    </p>
-    <div class="hero-actions">
-      <a href="#journey" class="btn-primary">Set Sail <span>â†’</span></a>
-      <div class="seal-stamp" title="桂林· Li River"></div>
-    </div>
+      thousand years — and still look unlike anywhere else on earth.</p>
+    <a href="#journey" class="btn cd-btn-primary" data-reveal>Discover Guilin <i class="bi bi-arrow-down"></i></a>
   </div>
-
-  <button class="scroll-cue" id="scrollCue" aria-label="Scroll to the journey">
-    <span></span> Scroll
-  </button>
 </header>
 
 <main>
@@ -56,7 +46,7 @@
   <div class="section-head">
     <p class="eyebrow center">THE STORY</p>
     <h2 class="section-title">Six Moments on the Water</h2>
-    <p class="section-sub">Scroll to follow the boat downriver â€” each bend has a story.</p>
+    <p class="section-sub">Scroll to follow the boat downriver — each bend has a story.</p>
   </div>
 
   <div class="journey-grid">
@@ -95,19 +85,19 @@
       <article class="story-block" data-index="0">
         <span class="story-num">01</span>
         <h3>Where the Mist Begins</h3>
-        <p>The cruise pushes off before the fog has fully lifted. One by one, limestone peaks rise out of the haze like ink strokes on wet paper â€” some say every shape holds a story: an elephant drinking, a brush resting, a phoenix taking flight.</p>
+        <p>The cruise pushes off before the fog has fully lifted. One by one, limestone peaks rise out of the haze like ink strokes on wet paper - some say every shape holds a story: an elephant drinking, a brush resting, a phoenix taking flight.</p>
       </article>
 
       <article class="story-block" data-index="1">
         <span class="story-num">02</span>
         <h3>Yangshuo</h3>
-        <p>By mid-morning the river slows and the town appears, low rooftops tucked beneath towering cliffs. CafÃ©s spill onto the pier, cormorant fishermen mend their nets, and West Street hums quietly before the evening crowds arrive.</p>
+        <p>By mid-morning the river slows and the town appears, low rooftops tucked beneath towering cliffs. Cafés spill onto the pier, cormorant fishermen mend their nets, and West Street hums quietly before the evening crowds arrive.</p>
       </article>
 
       <article class="story-block" data-index="2">
         <span class="story-num">03</span>
         <h3>Bamboo Rafting</h3>
-        <p>Past Yangshuo, the big cruise gives way to something smaller â€” a raft of lashed bamboo poles, poled by hand through shallow, glassy water. The peaks feel close enough here to touch.</p>
+        <p>Past Yangshuo, the big cruise gives way to something smaller - a raft of lashed bamboo poles, poled by hand through shallow, glassy water. The peaks feel close enough here to touch.</p>
       </article>
 
       <article class="story-block" data-index="3">
@@ -119,7 +109,7 @@
       <article class="story-block" data-index="4">
         <span class="story-num">05</span>
         <h3>Terraces in the Distance</h3>
-        <p>Inland, the land climbs into rice terraces layered like contour lines up the hillside, flooded fields catching the afternoon light in long silver ribbons â€” worked exactly as they were generations ago.</p>
+        <p>Inland, the land climbs into rice terraces layered like contour lines up the hillside, flooded fields catching the afternoon light in long silver ribbons - worked exactly as they were generations ago.</p>
       </article>
 
       <article class="story-block" data-index="5">
@@ -147,6 +137,7 @@
     <div class="video-card-holder">
         <div class="video-card" id="videoCard">
           <video class="video-poster" src="../videos/Guilin/liriver.mp4" controls playsinline></video>
+        </div>
     </div>
 </section>
 
@@ -164,7 +155,7 @@
       <span class="food-name">Rice Noodles</span>
     </button>
 
-    <button class="food-item" data-title="Beer Fish" data-description="Fresh Li River fish, simmered with local beer, tomatoes, chilli and pickled ginger â€” a Yangshuo speciality best eaten riverside.">
+    <button class="food-item" data-title="Beer Fish" data-description="Fresh Li River fish, simmered with local beer, tomatoes, chilli and pickled ginger - a Yangshuo speciality best eaten riverside.">
       <span class="food-thumb" aria-hidden="true"><img src="../images/Guilin/beerfish.jpeg" alt="Beer Fish"></span>
       <span class="food-name">Beer Fish</span>
     </button>
@@ -174,7 +165,7 @@
       <span class="food-name">Oil Tea</span>
     </button>
 
-    <button class="food-item" data-title="Stuffed River Snails" data-description="River snails stuffed with minced pork and herbs, simmered in a spiced broth â€” a beloved Guilin street food.">
+    <button class="food-item" data-title="Stuffed River Snails" data-description="River snails stuffed with minced pork and herbs, simmered in a spiced broth - a beloved Guilin street food.">
       <span class="food-thumb" aria-hidden="true"><img src="../images/Guilin/riversnails.jpeg" alt="Stuffed Snails"></span>
       <span class="food-name">Stuffed Snails</span>
     </button>
@@ -189,7 +180,7 @@
 <div class="food-modal" id="foodModal" aria-hidden="true">
   <div class="food-modal-backdrop" id="modalBackdrop"></div>
   <div class="food-modal-card" role="dialog" aria-modal="true">
-    <button class="modal-close" id="modalClose" aria-label="Close">Ã—</button>
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
     <span class="modal-thumb" aria-hidden="true"><img id="modalImage" src="" alt=""></span>
     <h4 id="foodTitle"></h4>
     <p id="foodDescription"></p>
@@ -265,7 +256,7 @@
     <div class="tip-card">
       <span class="tip-mark">01</span>
       <h5>Mind the Water</h5>
-      <p>Skip single-use plastics on board and choose reef-safe sunscreen â€” the same water irrigates the rice terraces downstream.</p>
+      <p>Skip single-use plastics on board and choose reef-safe sunscreen - the same water irrigates the rice terraces downstream.</p>
     </div>
     <div class="tip-card">
       <span class="tip-mark">02</span>
@@ -275,7 +266,7 @@
     <div class="tip-card">
       <span class="tip-mark">03</span>
       <h5>Respect the Fishermen</h5>
-      <p>Cormorant fishing displays are staged for visitors â€” tip fairly, and always ask before photographing someone at work.</p>
+      <p>Cormorant fishing displays are staged for visitors - tip fairly, and always ask before photographing someone at work.</p>
     </div>
   </div>
 </section>
@@ -290,5 +281,3 @@
   <script src="../JS/footer.js"></script>
 </body>
 </html>
-
-

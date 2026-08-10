@@ -1,22 +1,22 @@
 //================ NAV SCROLL STATE ================
 
-const nav = document.getElementById("siteNav");
 window.addEventListener("scroll", () => {
-  nav.classList.toggle("scrolled", window.scrollY > 60);
+  const nav = document.getElementById("siteNav"); // looked up on each scroll since navigationBar.js injects it after this file runs
+  if (nav) nav.classList.toggle("scrolled", window.scrollY > 60);
 }, { passive: true });
 
 //================ SCROLL CUE ================
 
-document.getElementById("scrollCue").addEventListener("click", () => {
-  document.getElementById("journey").scrollIntoView({ behavior: "smooth" });
-});
+const scrollCueBtn = document.getElementById("scrollCue");
+if (scrollCueBtn) {
+  scrollCueBtn.addEventListener("click", () => {
+    document.getElementById("journey").scrollIntoView({ behavior: "smooth" });
+  });
+}
 
 //================ RIVER JOURNEY SCROLLYTELLING ================
-
 const storyBlocks = document.querySelectorAll(".story-block");
 const journeyVisual = document.getElementById("journeyVisual");
-const riverPath = document.getElementById("riverPath");
-const boat = document.getElementById("boat"); // optional — journey works fine without it
 const stageIndexEl = document.getElementById("stageIndex");
 const stageNameEl = document.getElementById("stageName");
 const visualImageEl = document.getElementById("visualImage");
@@ -42,31 +42,7 @@ const stageImages = [
   "../images/Guilin/story6.jpeg"
 ];
 
-const pathLength = riverPath ? riverPath.getTotalLength() : 0;
-const storyRiverSvg = document.querySelector(".story-river");
 let activeIndex = 0;
-
-function moveBoatTo(index) {
-  // The boat illustration is optional — if it isn't in the page, skip silently
-  // instead of throwing, so the rest of the site keeps working.
-  if (!boat || !riverPath) return;
-
-  const total = stories.length;
-  const fraction = (index + 0.5) / total;
-  const dist = fraction * pathLength;
-  const point = riverPath.getPointAtLength(dist);
-  const nextPoint = riverPath.getPointAtLength(Math.min(dist + 4, pathLength));
-  const angle = Math.atan2(nextPoint.y - point.y, nextPoint.x - point.x) * (180 / Math.PI);
-
-  // The background svg stretches non-uniformly to cover the tall story
-  // column, so counter-scale the boat to keep its own proportions correct.
-  const box = storyRiverSvg.getBoundingClientRect();
-  const scaleX = box.width / 400;
-  const scaleY = box.height / 1080;
-  const correction = scaleY ? scaleX / scaleY : 1;
-
-  boat.style.transform = `translate(${point.x}px, ${point.y}px) rotate(${angle + 90}deg) scale(1, ${correction})`;
-}
 
 function updateVisualImage(index) {
   if (!visualImageEl) return;
@@ -85,7 +61,6 @@ function setActiveStage(index) {
   journeyVisual.dataset.stage = index;
   stageIndexEl.textContent = String(index + 1).padStart(2, "0");
   stageNameEl.textContent = stories[index];
-  moveBoatTo(index);
   updateVisualImage(index);
 
   dots.forEach(dot => dot.classList.toggle("active", Number(dot.dataset.index) === index));
@@ -102,12 +77,8 @@ const storyObserver = new IntersectionObserver(entries => {
 
 storyBlocks.forEach(block => storyObserver.observe(block));
 
-// initialise boat position and first active story
-moveBoatTo(0);
+// initialise first active story
 storyBlocks[0].classList.add("active");
-
-// keep the boat aligned with the river path if the window is resized
-window.addEventListener("resize", () => moveBoatTo(activeIndex));
 
 dots.forEach(dot => {
   dot.addEventListener("click", () => {
@@ -194,29 +165,6 @@ const revealObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.2 });
 
 revealTargets.forEach(el => revealObserver.observe(el));
-
-//================ CLICK-TO-PLAY VIDEO ================
-// Loads the YouTube iframe only when the person clicks play, instead of on
-// page load. This sidesteps "Error 153 / video player configuration error",
-// which is most often caused by the iframe trying to load from a file://
-// page instead of a real server, or from a video whose owner disabled
-// embedding. The fallback link under the video always works either way.
-
-const videoCard = document.getElementById("videoCard");
-const videoPlayBtn = document.getElementById("videoPlayBtn");
-const VIDEO_ID = "rB4Ir88aDuA";
-
-if (videoPlayBtn && videoCard) {
-  videoPlayBtn.addEventListener("click", () => {
-    const iframe = document.createElement("iframe");
-    iframe.src = `https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1`;
-    iframe.title = "Guilin, China 4K Drone | Majestic Karst Mountains & Li River Aerial View";
-    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-    iframe.allowFullscreen = true;
-    videoCard.innerHTML = "";
-    videoCard.appendChild(iframe);
-  });
-}
 
 //================ WHOLE-PAGE DOT NAVIGATION ================
 
