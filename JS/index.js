@@ -69,7 +69,7 @@ function buildMap(){
     const pts=pts2str(d.poly);
     const tag=CITY_TAGS[city];
     provs+=`<g class="prov" data-city="${city}"><polygon class="hit" points="${pts}"/></g>`;
-    tags+=`<a href="${PAGES[city]}" aria-label="Explore ${city}"><g class="city-tag" data-city="${city}" data-theme="${d.theme}" transform="translate(${tag.x} ${tag.y})" tabindex="0"><g class="tag-lift"><rect x="${-tag.w/2}" y="-17" width="${tag.w}" height="34" rx="6" fill="url(#tag-${d.theme})" stroke="rgba(255,255,255,.32)" stroke-width="1"/><text x="0" y="5" text-anchor="middle" fill="#fff" font-family="Inter,sans-serif" font-size="14.5" font-weight="600">${city}</text></g></g></a>`;
+    tags+=`<a class="city-link" href="${PAGES[city]}" target="_self" aria-label="Explore ${city}"><g class="city-tag" data-city="${city}" data-theme="${d.theme}" transform="translate(${tag.x} ${tag.y})" tabindex="0" role="link"><g class="tag-lift"><rect x="${-tag.w/2}" y="-17" width="${tag.w}" height="34" rx="6" fill="url(#tag-${d.theme})" stroke="rgba(255,255,255,.32)" stroke-width="1"/><text x="0" y="5" text-anchor="middle" fill="#fff" font-family="Inter,sans-serif" font-size="14.5" font-weight="600">${city}</text></g></g></a>`;
   });
   THEME_LABELS.forEach(l=>{const th=THEME[l.t];
     const caps=th.cap.map((line,k)=>`<tspan x="40" dy="${k===0?0:18}">${line}</tspan>`).join('');
@@ -78,6 +78,28 @@ function buildMap(){
   document.getElementById('heroMap').innerHTML=`<svg viewBox="0 0 ${VB.w} ${VB.h}" xmlns="http://www.w3.org/2000/svg">${tagDefs}<image href="${MAP}" x="0" y="0" width="${VB.w}" height="${VB.h}"/><g id="provGroups">${provs}</g><g id="themeLabels">${themes}</g><g id="cityTags">${tags}</g></svg>`;
 }
 buildMap();
+
+/* SVG links can behave differently across browsers, so each visible city tag
+   also receives an explicit mouse, touch and keyboard navigation handler. */
+document.querySelectorAll('.city-tag').forEach(tag=>{
+  const openCity=()=>{
+    const destination=PAGES[tag.dataset.city];
+    if(destination) window.location.assign(destination);
+  };
+
+  tag.addEventListener('click',event=>{
+    event.preventDefault();
+    event.stopPropagation();
+    openCity();
+  });
+
+  tag.addEventListener('keydown',event=>{
+    if(event.key==='Enter'||event.key===' '){
+      event.preventDefault();
+      openCity();
+    }
+  });
+});
 
 document.getElementById('journeys').innerHTML='<h4>EXPLORE FOUR JOURNEYS</h4>'+
   Object.keys(THEME).map(t=>{const th=THEME[t];return `<a class="jrow" data-theme="${t}" href="${JOURNEY_PAGES[t]}" aria-label="Explore ${th.name}"><div class="ji" style="color:${th.color}">${th.icon}</div><div class="jt"><b>${th.name}</b><span>${th.cities}</span></div><div class="chev">&rsaquo;</div></a>`;}).join('');

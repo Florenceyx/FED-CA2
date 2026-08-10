@@ -6,10 +6,8 @@
   function updateNav(){
     if (nav) nav.classList.toggle('scrolled', window.scrollY > 40);
   }
-  if (nav) {
-    window.addEventListener('scroll', updateNav, {passive:true});
-    updateNav();
-  }
+  window.addEventListener('scroll', updateNav, {passive:true});
+  updateNav();
 
   /* ---------- Then / Now compare slider ---------- */
   const heroSlider   = document.getElementById('heroSlider');

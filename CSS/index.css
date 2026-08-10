@@ -153,7 +153,7 @@
   .prov .hit{fill:#000;fill-opacity:0;pointer-events:all}
 
   /* City tags are independent overlays. The full map never moves. */
-  .city-tag{pointer-events:auto;cursor:pointer;outline:none}
+  .city-link,.city-tag{pointer-events:all;cursor:pointer;outline:none;touch-action:manipulation}
   .city-tag .tag-lift{
     transform-box:fill-box;
     transform-origin:center;
