@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-<link rel="stylesheet" href="../CSS/nav.css">
+<link rel="stylesheet" href="../CSS/navigationBar.css">
 <link rel="stylesheet" href="../CSS/footer.css">
 <link rel="stylesheet" href="../CSS/Yunnan.css">
 </head>
@@ -22,10 +22,48 @@
 
 <div class="thread-trail" id="threadTrail" aria-hidden="true"></div>
 
-<div id="nav-placeholder"></div>
 
 <!-- ============ HERO ============ -->
 <header id="top" class="yn-hero d-flex align-items-center">
+  <nav class="main-navbar">
+  <div class="brand">
+    <div class="logo">
+      <b>CHINA<br>UNFOLDED</b>
+      <span>One Country. Thousands of Stories.</span>
+    </div>
+
+    <div class="seal">
+      &#25506;&#28216;<br>&#20013;&#22269;
+    </div>
+  </div>
+
+  <div class="navlinks">
+    <a href="./index.html" data-page="index.html">HOME</a>
+
+    <div class="nav-dropdown">
+      <a href="#" class="destination-link" aria-haspopup="true">DESTINATION</a>
+      <div class="destination-menu">
+        <a href="./Beijing.html">Beijing</a>
+        <a href="./Xi'an.html">Xi'an</a>
+        <a href="./Shanghai.html">Shanghai</a>
+        <a href="./Shenzhen.html">Shenzhen</a>
+        <a href="./Chongqing.html">Chongqing</a>
+        <a href="./Zhangjiajie.html">Zhangjiajie</a>
+        <a href="./Guilin.html">Guilin</a>
+        <a href="./Chengdu.html">Chengdu</a>
+        <a href="./Yunnan.html">Yunnan</a>
+      </div>
+    </div>
+
+    <a href="./PlanYourJourney.html" data-page="PlanYourJourney.html">PLANNER</a>
+    <a href="./seasonalChina.html" data-page="seasonalChina.html">SEASONAL CHINA</a>
+  </div>
+
+  <button class="navtoggle" type="button" aria-label="Open navigation" aria-expanded="false">
+    &#9776;
+  </button>
+</nav>
+
   <div class="yn-hero-texture"></div>
   <div class="container position-relative">
     <p class="yn-eyebrow reveal">云南 · CULTURAL ROUTE</p>
@@ -108,11 +146,6 @@
     <path d="M0,0 Q10,20 20,0 Q30,20 40,0 Q50,20 60,0 Q70,20 80,0 Q90,20 100,0 Q110,20 120,0 Q130,20 140,0 Q150,20 160,0 Q170,20 180,0 Q190,20 200,0 Q210,20 220,0 Q230,20 240,0 Q250,20 260,0 Q270,20 280,0 Q290,20 300,0 Q310,20 320,0 Q330,20 340,0 Q350,20 360,0 Q370,20 380,0 Q390,20 400,0 V20 H0 Z" fill="transparent"/>
   </svg>
 </section>
-
-
-
-
-
 <!-- ============ QUILT ============ -->
 <section class="quilt-section" id="quilt">
   <div class="corner-ornament corner-ornament--tr" aria-hidden="true">
@@ -203,9 +236,6 @@
   <div class="thread-rule"></div>
 </section>
 
-<div id="footer-placeholder"></div>
-
-
 <div class="veil" id="veil"></div>
 <div class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="panelTitle">
   <div class="flap flap1"></div><div class="flap flap2"></div><div class="flap flap3"></div><div class="flap flap4"></div>
@@ -226,19 +256,59 @@
   </div>
 </div>
 
-<script>
-  fetch('./navigationBar.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('nav-placeholder').innerHTML = html;
-    });
+<footer class="site-footer">
+  <div class="fbrand">
+    <div class="footer-logo">
+      CHINA<br>UNFOLDED
+    </div>
 
-  fetch('./footer.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('footer-placeholder').innerHTML = html;
-    });
-</script>
+    <div class="fseal">
+      &#25506;&#28216;<br>&#20013;&#22269;
+    </div>
+  </div>
+
+  <div class="footer-pattern footer-pattern-left">
+    <img src="../images/image/footer-pattern.png" alt="" aria-hidden="true">
+  </div>
+
+  <div class="ftag">
+    <b>EXPLORE. DISCOVER. UNDERSTAND.</b>
+    <p>Every journey reveals a different side of China.</p>
+  </div>
+
+  <div class="footer-pattern footer-pattern-right">
+    <img src="../images/image/footer-pattern.png" alt="" aria-hidden="true">
+  </div>
+
+  <div class="fsocial">
+    <a
+      href="./feedback.html"
+      id="feedbackFormLink"
+      aria-label="Give website feedback"
+      data-tooltip="Help us improve — share your feedback!"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6 3.5h9.5L19 7v13.5H6z"></path>
+        <path d="M15.5 3.5V7H19"></path>
+        <path d="M9 11h7M9 14.5h7M9 18h4"></path>
+      </svg>
+    </a>
+
+    <a
+      href="#"
+      id="shareInstagram"
+      aria-label="Share on Instagram"
+      data-tooltip="Share this journey on Instagram"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+        <circle cx="12" cy="12" r="4"></circle>
+        <circle class="icon-dot" cx="17.5" cy="6.5" r="1"></circle>
+      </svg>
+    </a>
+  </div>
+</footer>
+
 <script src="../JS/navigationBar.js"></script>
 <script src="../JS/footer.js"></script>
 <script src="../JS/Yunnan.js"></script>
