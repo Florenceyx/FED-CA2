@@ -12,6 +12,7 @@
   --red-dark:    #7C1815;
   --gold:        #c68522;
   --gold-soft:   #ae8534;
+  --accent-gold-soft:#f0c48f;
   --font-display:'Playfair Display', serif;
   --font-script: 'Cormorant Garamond', serif;
   --font-body:   'Inter', sans-serif;
@@ -27,7 +28,7 @@
   color: var(--parchmentpaper) !important;
 }
 .main-navbar .navlinks a:hover{
-  color: var(--gold-soft) !important;
+  color: var(--accent-gold-softold-soft) !important;
 }
 .main-navbar .brand b{
   color: var(--parchment) !important;
