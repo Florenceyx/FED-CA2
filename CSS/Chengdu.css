@@ -24,13 +24,13 @@
 
 /* ===== nav color override, this page and Yunnan only ===== */
 .main-navbar .navlinks a{
-  color: var(--paper) !important;
+  color: var(--parchmentpaper) !important;
 }
 .main-navbar .navlinks a:hover{
-  color: var(--accent-gold-soft) !important;
+  color: var(--gold-soft) !important;
 }
 .main-navbar .brand b{
-  color: var(--paper) !important;
+  color: var(--parchment) !important;
 } 
 
 *{box-sizing:border-box;}
