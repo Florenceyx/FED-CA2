@@ -161,3 +161,127 @@
     .picker.has-preview .pick{opacity:1;filter:none;transform:none}
     .ctrack:not(.dragging) .card:hover{transform:none}
   }
+/* ---------- COMPACT SEASON TABLE ---------- */
+
+.season-summary {
+  max-width: 1050px;
+  margin: 10px auto 24px;
+  padding: 0 24px;
+}
+
+.season-summary h2 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-family: var(--serif);
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.season-summary-scroll {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid rgba(198, 162, 75, 0.35);
+  border-radius: 10px;
+  background: var(--ivory-soft);
+}
+
+.season-summary-table {
+  width: 100%;
+  min-width: 760px;
+  margin: 0;
+  border-collapse: collapse;
+}
+
+.season-summary-table caption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.season-summary-table th,
+.season-summary-table td {
+  padding: 11px 14px;
+  border-bottom: 1px solid rgba(14, 27, 42, 0.1);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.season-summary-table thead {
+  background: var(--navy);
+  color: var(--gold-soft);
+}
+
+.season-summary-table thead th {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.season-summary-table tbody th {
+  color: var(--navy);
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.season-summary-table tbody td {
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 12px;
+}
+
+.season-summary-table tbody tr:last-child th,
+.season-summary-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.season-summary-table tbody tr:hover {
+  background: rgba(198, 162, 75, 0.08);
+}
+
+.table-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 7px;
+  border-radius: 50%;
+}
+
+.table-spring {
+  background: var(--spring);
+}
+
+.table-summer {
+  background: var(--summer);
+}
+
+.table-autumn {
+  background: var(--autumn);
+}
+
+.table-winter {
+  background: var(--winter);
+}
+
+@media (max-width: 640px) {
+  .season-summary {
+    margin-bottom: 20px;
+    padding: 0 16px;
+  }
+
+  .season-summary h2 {
+    font-size: 22px;
+  }
+git status
+  .season-summary-table th,
+  .season-summary-table td {
+    padding: 10px 12px;
+  }
+}
