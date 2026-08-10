@@ -265,7 +265,7 @@
 .main-navbar .destination-menu a {
   padding: 9px 10px;
   border-radius: 8px;
-  color: #2a1c12; /* dark text on the light dropdown */
+  color: #2a1c12 !important;   /* ← add !important here */
   font-size: 12px;
   font-weight: 500;
   letter-spacing: .02em;
