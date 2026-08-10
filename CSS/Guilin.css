@@ -62,14 +62,11 @@ p{line-height:1.75;color:var(--text-cream-dim);}
 .section{padding:120px 0;}
 
 /* ================= HERO ================= */
-/* ================= HERO ================= */
 
-.cd-hero{
 .cd-hero{
   position:relative;height:100vh;min-height:640px;overflow:hidden;
   display:flex;align-items:center;
 }
-.cd-hero-texture{
 .cd-hero-texture{
   position:absolute;inset:0;
   background:
