@@ -45,7 +45,7 @@
   color: var(--parchment) !important;
 }
 .main-navbar .brand .logo span{
-  color: var(--parchmentpaper) !important;
+  color: var(--parchment) !important;
 }
 
 *{box-sizing:border-box;}
