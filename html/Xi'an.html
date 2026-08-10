@@ -3,30 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Xi'an â€” Unearth History</title>
+<title>Xi'an - Unearth History</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../CSS/Xi'an.css">
-
-
 <link rel="stylesheet" href="../CSS/navigationBar.css">
 <link rel="stylesheet" href="../CSS/footer.css">
+<link rel="stylesheet" href="../CSS/Xi'an.css">
 </head>
-<body>
+<body class="shared-nav-on-image">
   <header>
-    <div id="navigation-placeholder"></div>
+    <nav class="main-navbar">
+  <div class="brand">
+    <div class="logo">
+      <b>CHINA<br>UNFOLDED</b>
+      <span>One Country. Thousands of Stories.</span>
+    </div>
+
+    <div class="seal">
+      &#25506;&#28216;<br>&#20013;&#22269;
+    </div>
+  </div>
+
+  <div class="navlinks">
+    <a href="./index.html" data-page="index.html">HOME</a>
+
+    <div class="nav-dropdown">
+      <a href="#" class="destination-link" aria-haspopup="true">DESTINATION</a>
+      <div class="destination-menu">
+        <a href="./Beijing.html">Beijing</a>
+        <a href="./Xi'an.html">Xi'an</a>
+        <a href="./Shanghai.html">Shanghai</a>
+        <a href="./Shenzhen.html">Shenzhen</a>
+        <a href="./Chongqing.html">Chongqing</a>
+        <a href="./Zhangjiajie.html">Zhangjiajie</a>
+        <a href="./Guilin.html">Guilin</a>
+        <a href="./Chengdu.html">Chengdu</a>
+        <a href="./Yunnan.html">Yunnan</a>
+      </div>
+    </div>
+
+    <a href="./PlanYourJourney.html" data-page="PlanYourJourney.html">PLANNER</a>
+    <a href="./seasonalChina.html" data-page="seasonalChina.html">SEASONAL CHINA</a>
+  </div>
+
+  <button class="navtoggle" type="button" aria-label="Open navigation" aria-expanded="false">
+    &#9776;
+  </button>
+</nav>
+
   </header>
 <div class="dust" id="dust"></div>
 <!-- HERO -->
 <section class="hero" id="home" style="padding:0;">
   <div class="hero-content">
-    <div class="eyebrow">SHAANXI Â· CHINA</div>
+    <div class="eyebrow">SHAANXI · CHINA</div>
     <h1>XI'AN</h1>
     <div class="sub">UNEARTH HISTORY</div>
     <p>Step back in time and uncover the glorious past of Xi'an, where ancient wonders come to life beneath the golden dust of Shaanxi.</p>
-    <button class="btn-dig" id="beginBtn"><span>BEGIN EXCAVATION</span><span class="icon">â›</span></button>
+    <button class="btn-dig" id="beginBtn"><span>DISCOVER XI'AN</span><span class="icon">⛏</span></button>
   </div>
-  <div class="scroll-cue">âŒ„</div>
+  <div class="scroll-cue">⌄</div>
 </section>
 
 <!-- TREASURES -->
@@ -34,7 +70,7 @@
   <div class="section-head reveal">
     <div class="kicker">A CITY LAYERED IN TIME</div>
     <h2>UNEARTH THE TREASURES OF XI'AN</h2>
-    <p class="desc">Four eras, one city â€” dig through each layer to find the next.</p>
+    <p class="desc">Four eras, one city — dig through each layer to find the next.</p>
   </div>
   <div class="treasures">
     <div class="treasure reveal reveal-stagger" style="--delay:0s">
@@ -42,21 +78,21 @@
       <div class="label">Excavation Site</div>
       <div class="treasure-art t1"><div class="layer"></div><div class="glyph"><img src="../images/xi an images/terracotta army.jpg" alt="Terracotta Army"></div></div>
       <p class="caption">Begin your journey at the world-famous Terracotta Army, guardians of the First Emperor.</p>
-      <div class="treasure-arrow">â†’</div>
+      <div class="treasure-arrow">→</div>
     </div>
     <div class="treasure reveal reveal-stagger" style="--delay:.15s">
       <div class="num">02</div>
       <div class="label">Ancient City Wall</div>
       <div class="treasure-art t2"><div class="layer"></div><div class="glyph"><img src="../images/xi an images/Xi'an City Wall.jpg" alt="Xi'an City Wall"></div></div>
       <p class="caption">Walk along the Ancient City Wall, one of the best-preserved in China.</p>
-      <div class="treasure-arrow">â†’</div>
+      <div class="treasure-arrow">→</div>
     </div>
     <div class="treasure reveal reveal-stagger" style="--delay:.3s">
       <div class="num">03</div>
       <div class="label">Tang Dynasty</div>
       <div class="treasure-art t3"><div class="layer"></div><div class="glyph"><img src="../images/xi an images/chang an.jpg" alt="Chang'an"></div></div>
       <p class="caption">Step into the Tang Dynasty and experience the grandeur of ancient Chang'an.</p>
-      <div class="treasure-arrow">â†’</div>
+      <div class="treasure-arrow">→</div>
     </div>
     <div class="treasure reveal reveal-stagger" style="--delay:.45s">
       <div class="num">04</div>
@@ -80,15 +116,15 @@
       <div class="food-info">
         <div class="fname">Biangbiang Noodles</div>
         <div class="fdesc">Wide, hand-pulled noodles slapped by hand, tossed in a fiery chili-oil sauce with garlic and vinegar.</div>
-        <div class="fmeta">MUST TRY Â· STREET STALL FAVORITE</div>
+        <div class="fmeta">MUST TRY · STREET STALL FAVORITE</div>
       </div>
     </div>
     <div class="food-card f-card" data-i="2">
       <div class="food-art f2"><div class="layer"></div><div class="glyph"><img src="../images/xi an images/Rou Jia Mo.jpg" alt="Rou Jia Mo"></div><div class="food-hint">+</div></div>
       <div class="food-info">
         <div class="fname">RouJiaMo</div>
-        <div class="fdesc">Often called the Chinese hamburger â€” a crisp flatbread stuffed with slow-braised, tender stewed meat.</div>
-        <div class="fmeta">QUICK BITE Â· ON-THE-GO</div>
+        <div class="fdesc">Often called the Chinese hamburger — a crisp flatbread stuffed with slow-braised, tender stewed meat.</div>
+        <div class="fmeta">QUICK BITE · ON-THE-GO</div>
       </div>
     </div>
     <div class="food-card f-card" data-i="3">
@@ -96,7 +132,7 @@
       <div class="food-info">
         <div class="fname">Yangrou Paomo</div>
         <div class="fdesc">A hearty lamb soup with crumbled flatbread, Xi'an's ultimate traditional comfort food.</div>
-        <div class="fmeta">COMFORT FOOD Â· WINTER FAVORITE</div>
+        <div class="fmeta">COMFORT FOOD · WINTER FAVORITE</div>
       </div>
     </div>
     <div class="food-card f-card" data-i="4">
@@ -104,15 +140,15 @@
       <div class="food-info">
         <div class="fname">Lamb Skewers</div>
         <div class="fdesc">Grilled to smoky perfection over charcoal, dusted with cumin and chili from Xinjiang-inspired grills.</div>
-        <div class="fmeta">NIGHT MARKET Â· SPICY</div>
+        <div class="fmeta">NIGHT MARKET · SPICY</div>
       </div>
     </div>
     <div class="food-card f-card" data-i="5">
       <div class="food-art f5"><div class="layer"></div><div class="glyph"><img src="../images/xi an images/persimmon cake.jpg" alt="Persimmon Cake"></div><div class="food-hint">+</div></div>
       <div class="food-info">
         <div class="fname">Persimmon Cake</div>
-        <div class="fdesc">Sweet, soft, and naturally delicious â€” a Shaanxi specialty made from ripe local persimmons.</div>
-        <div class="fmeta">SWEET TREAT Â· SEASONAL</div>
+        <div class="fdesc">Sweet, soft, and naturally delicious — a Shaanxi specialty made from ripe local persimmons.</div>
+        <div class="fmeta">SWEET TREAT · SEASONAL</div>
       </div>
     </div>
   </div>
@@ -146,11 +182,61 @@
     </div>
   </div>
 </section>
-<div id="footer-placeholder"></div>
-<script src="../JS/xian.js"></script>
+<footer class="site-footer">
+  <div class="fbrand">
+    <div class="footer-logo">
+      CHINA<br>UNFOLDED
+    </div>
 
-  <script src="../JS/navigationBar.js"></script>
-  <script src="../JS/footer.js"></script>
+    <div class="fseal">
+      &#25506;&#28216;<br>&#20013;&#22269;
+    </div>
+  </div>
+
+  <div class="footer-pattern footer-pattern-left">
+    <img src="../images/image/footer-pattern.png" alt="" aria-hidden="true">
+  </div>
+
+  <div class="ftag">
+    <b>EXPLORE. DISCOVER. UNDERSTAND.</b>
+    <p>Every journey reveals a different side of China.</p>
+  </div>
+
+  <div class="footer-pattern footer-pattern-right">
+    <img src="../images/image/footer-pattern.png" alt="" aria-hidden="true">
+  </div>
+
+  <div class="fsocial">
+    <a
+      href="./feedback.html"
+      id="feedbackFormLink"
+      aria-label="Give website feedback"
+      data-tooltip="Help us improve — share your feedback!"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6 3.5h9.5L19 7v13.5H6z"></path>
+        <path d="M15.5 3.5V7H19"></path>
+        <path d="M9 11h7M9 14.5h7M9 18h4"></path>
+      </svg>
+    </a>
+
+    <a
+      href="#"
+      id="shareInstagram"
+      aria-label="Share on Instagram"
+      data-tooltip="Share this journey on Instagram"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+        <circle cx="12" cy="12" r="4"></circle>
+        <circle class="icon-dot" cx="17.5" cy="6.5" r="1"></circle>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="../JS/xian.js"></script>
+<script src="../JS/navigationBar.js"></script>
+<script src="../JS/footer.js"></script>
 </body>
 </html>
 

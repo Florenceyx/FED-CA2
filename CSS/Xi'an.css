@@ -47,7 +47,7 @@
     min-height:100vh;
     display:flex; align-items:center;
     background:
-      linear-gradient(120deg, rgba(22,15,10,.75) 0%, rgba(22,15,10,.55) 40%, rgba(74,50,32,.65) 100%),
+      linear-gradient(180deg, rgba(10,7,5,.85) 0%, rgba(22,15,10,.5) 15%, rgba(22,15,10,.55) 40%, rgba(74,50,32,.65) 100%),
       url('../images/xi an images/hero.jpg') center center / cover no-repeat;
     overflow:hidden;
 }
@@ -108,16 +108,22 @@
     max-width:420px; color:var(--sand-light); line-height:1.9; font-size:16px; margin-bottom:34px;
   }
   .btn-dig{
-    display:inline-flex; align-items:center; gap:12px;
-    padding:16px 30px;
-    background:var(--paper); color:var(--ink);
-    font-family:var(--serif); letter-spacing:3px; font-size:13px; font-weight:600;
-    border:1px solid var(--earth);
-    cursor:pointer;
-    position:relative;
-    transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
-  }
-  .btn-dig:hover{ background:var(--gold-bright); transform:translateY(-3px); box-shadow:0 12px 28px rgba(0,0,0,.4);}
+  display:inline-flex; align-items:center; gap:12px;
+  padding:13px 26px;
+  background:rgba(179, 74, 46, 0.484); /* var(--lantern) at ~48% opacity */
+  color:var(--paper);
+  border:1px solid rgba(122, 82, 51, 0.537); /* var(--earth) at ~54% opacity */
+  font-family:var(--serif); letter-spacing:2px; font-size:12px; font-weight:500; text-transform:uppercase;
+  cursor:pointer;
+  position:relative;
+  transition: transform .3s ease, background .3s ease, border-color .3s ease, color .3s ease;
+}
+.btn-dig:hover{
+  border-color:var(--gold-bright);
+  color:var(--gold-bright);
+  background:rgba(201, 162, 74, .18); /* var(--gold) tint */
+  transform:translateX(3px);
+}
   .btn-dig .icon{transition: transform .4s ease;}
   .btn-dig:hover .icon{transform:rotate(-25deg) translateY(-2px);}
 
